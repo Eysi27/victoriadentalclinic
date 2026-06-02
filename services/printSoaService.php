@@ -39,7 +39,7 @@ class ServiceClass
            <div class="row align-items-center">
             <div class="col-lg-6 d-flex align-items-center" style="text-align:left;">
                     <img src="img/white_logo_final.jpg" alt="Company Logo" style="height: 40px; margin-right: 10px;">
-                    <strong>Smiles & More</strong>
+                    <strong>Victoria Advanced Dental Clinic</strong>
                 </div>
                 <div class="col-lg-6" style="text-align:right;">
                     Bringing you, your best smile!

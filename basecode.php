@@ -21,7 +21,7 @@ if ($_SESSION["account_type"] != 0 && $_SESSION["account_type"] != 100) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Smiles & More</title>
+    <title>Victoria Advanced Dental Clinic</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

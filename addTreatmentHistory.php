@@ -13,7 +13,7 @@ error_reporting(0);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Smiles & More</title>
+    <title>Victoria Advanced Dental Clinic</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -59,7 +59,7 @@ error_reporting(0);
                         <div class="card-body" id="bodyResult">
 
                             <div class="row">
-                                <div class="col-lg-6"><strong>Smiles & More</strong></div>
+                                <div class="col-lg-6"><strong>Victoria Advanced Dental Clinic</strong></div>
                                 <div class="col-lg-6" style="text-align:right;">Bringing you, your best smile!</div>
                             </div>
                             <div class="row">
