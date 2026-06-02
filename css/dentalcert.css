@@ -1,0 +1,28 @@
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printable-area-cert,
+    #printable-area-cert * {
+        visibility: visible;
+    }
+
+    #printable-area-cert {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1in;
+        /* Optional: Adjust padding as needed */
+        box-sizing: border-box;
+        font-size: 12pt;
+        /* Adjust for A4 readability */
+        page-break-after: always;
+    }
+
+    .modal-footer {
+        display: none !important;
+    }
+}

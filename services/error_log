@@ -1,0 +1,55 @@
+[22-Oct-2022 15:04:51 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/esoaSubmitService.php:34
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/esoaSubmitService.php(11): ServiceClass->submitEsoa('DR. KATHLEEN B ...', '2019-11-26', '9:00AM-10:30AM', '424', '0')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/esoaSubmitService.php on line 34
+[22-Oct-2022 15:05:19 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/OptionloadTreatmentService.php:28
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/OptionloadTreatmentService.php(4): ServiceClass->loadTreatmentList()
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/OptionloadTreatmentService.php on line 28
+[22-Oct-2022 15:05:31 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php:29
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/clientTreatmentListService.php(4): ServiceClass->loadClientTreatment()
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php on line 29
+[22-Oct-2022 15:05:37 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php:29
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/clientTreatmentListService.php(4): ServiceClass->loadClientTreatment()
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php on line 29
+[22-Oct-2022 15:05:45 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php:29
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/clientTreatmentListService.php(4): ServiceClass->loadClientTreatment()
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/clientTreatmentListService.php on line 29
+[22-Oct-2022 15:05:58 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38
+[22-Oct-2022 15:06:27 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38
+[22-Oct-2022 15:11:50 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38
+[22-Oct-2022 15:12:03 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38
+[22-Oct-2022 15:24:12 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38
+[22-Oct-2022 15:32:01 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/kbfdenta/public_html/system/services/validateUserAccount.php:38
+Stack trace:
+#0 /home/kbfdenta/public_html/system/services/validateUserAccount.php(10): ServiceClass->loginAccount('admins', 'z8NgWBKFkb')
+#1 {main}
+  thrown in /home/kbfdenta/public_html/system/services/validateUserAccount.php on line 38

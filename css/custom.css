@@ -1,0 +1,144 @@
+#photoPreview {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+#cameraModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    /* Optional overlay */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    /* Optional: limit video height */
+    object-fit: cover;
+}
+
+#modalContent button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ensure it's above all elements */
+    width: 350px;
+    /* Adjust as needed */
+    text-align: center;
+}
+
+.toast {
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.toast-header {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.close {
+    color: white;
+    opacity: 0.8;
+}
+
+#signature-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#signature-modal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+#signature-pad {
+    width: 100%;
+    height: 200px;
+    /* or your preferred height */
+    display: block;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    touch-action: none;
+    /* Prevents default scrolling/panning on touch */
+}
+
+
+.clickable {
+    cursor: pointer;
+}
+
+.underline-on-hover {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    /* optional: prevent color change */
+}
+
+.underline-on-hover:hover {
+    text-decoration: underline !important;
+    font-weight: bold;
+    color: black
+}
+
+#loading {
+    transition: opacity 0.3s ease;
+}
+
+.bg-purple {
+    background-color: #622c9e !important;
+    color: white !important;
+}
+
+.modal-xl-custom {
+    max-width: 95% !important;
+    /* or any %/px you prefer */
+}
+.bg-gold {
+    background-color: goldenrod !important;
+    color: white !important;
+}

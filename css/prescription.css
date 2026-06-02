@@ -1,0 +1,25 @@
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printable-area,
+    #printable-area * {
+        visibility: visible;
+    }
+
+    #printable-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4.25in;
+        height: 5.5in;
+        font-size: 11pt;
+        padding: 0.5in;
+        box-sizing: border-box;
+    }
+
+    .modal-footer {
+        display: none !important;
+    }
+}
