@@ -21,7 +21,7 @@ if ($_SESSION["account_type"] != 0 && $_SESSION["account_type"] != 100) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Victoria Advanced Dental Clinic</title>
+    <title>Victoria Advanced Dental Care</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@ if ($_SESSION["account_type"] != 0 && $_SESSION["account_type"] != 100) {
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-warning   shadow-sm"><i
-                                class="fas fa-exclamation fa-sm text-white-50"></i> WELCOME TO VICTORIA ADVANCED DENTAL CLINIC
+                                class="fas fa-exclamation fa-sm text-white-50"></i> WELCOME TO Victoria Advanced Dental Care
                             OFFICIAL SYSTEM</a>
                     </div>
 

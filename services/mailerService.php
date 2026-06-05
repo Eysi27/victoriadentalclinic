@@ -50,7 +50,7 @@ $message = "
 <body>
   <div class='email-container'>
     <div class='email-header'>
-      <h2>Victoria Advanced Dental Clinic Notification</h2>
+      <h2>Victoria Advanced Dental Care Notification</h2>
     </div>
     <div class='email-body'>
       <p><strong>$greetings,</strong></p>

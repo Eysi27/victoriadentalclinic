@@ -41,7 +41,7 @@ class ServiceClass
     <!-- Centered Logo and Clinic Name -->
     <div style="text-align: center; margin-bottom: 0.5em;">
         <img src="img/white_logo_final.jpg" alt="Company Logo" style="height: 40px; display: inline-block; vertical-align: middle; margin-bottom: 0.3em;">
-        <div style="font-size: 20pt; font-weight: bold;">Victoria Advanced Dental Clinic</div>
+        <div style="font-size: 20pt; font-weight: bold;">Victoria Advanced Dental Care</div>
     </div>
 
     <!-- Centered Address and Contact Info -->

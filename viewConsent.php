@@ -13,7 +13,7 @@ error_reporting(0);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Victoria Advanced Dental Clinic</title>
+    <title>Victoria Advanced Dental Care</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,15 +61,13 @@ error_reporting(0);
                             <input type="hidden" value="<?php echo $_GET['clientid']; ?>" id="clientId">
 
                             <div style="display: flex; align-items: center; margin-left: 30px; margin-top:0px;">
-                                <img src="img/white_logo_final.jpg" alt="Logo"
+                                <img src="img/vadc_logo.jpg" alt="Logo"
                                     style="max-height: 100px; margin-right: 20px;">
                                 <div>
-                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Dr. Nikki Sarmiento Dental Care
-                                        Clinic</h4>
+                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Victoria Advanced Dental Care</h4>
                                     <p style="margin: 0;">
-                                        Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias<br>
-                                        Angeles City Pampanga PH 2009<br>
-                                        0927-605-8418 / 0960-437-5938
+                                        101 Iriga, Iriga City, Camarines Sur<br>
+                                        (0968) 350 7067
                                     </p>
                                 </div>
                             </div>

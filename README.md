@@ -1,2 +1,2 @@
 # victoriadentalclinic
-Victoria Advanced Dental Clinic
+Victoria Advanced Dental Care
