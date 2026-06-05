@@ -61,14 +61,12 @@ error_reporting(0);
                             <input type="hidden" value="<?php echo $_GET['clientId']; ?>" id="clientId">
 
                             <div style="display: flex; align-items: center; margin-left: 50px;">
-                                <img src="img/white_logo_final.jpg" alt="Logo"
+                                <img src="img/vadc_whitebg.png" alt="Logo"
                                     style="max-height: 100px; margin-right: 20px;">
                                 <div>
-                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Dr. Nikki Sarmiento Dental Care
-                                        Clinic</h4>
+                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Victoria Advanced Dental Care</h4>
                                     <p style="margin: 0;">
-                                        Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias<br>
-                                        Angeles City Pampanga PH 2009
+                                        101 Iriga, Iriga City, Camarines Sur
                                         <br>
                                         (0968) 350 7067
                                     </p>

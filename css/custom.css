@@ -139,6 +139,6 @@
     /* or any %/px you prefer */
 }
 .bg-gold {
-    background-color: goldenrod !important;
+    background-color: rgba(197, 171, 21, 0.884) !important;
     color: white !important;
 }
