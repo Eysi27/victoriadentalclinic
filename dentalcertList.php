@@ -134,7 +134,7 @@ error_reporting(0);
 
                                     <p style="text-align: center; color: black; margin: 0;font-size:13px;">
 
-                                        <strong>Contact Number:</strong> 0927-605-8418 / 0960-437-5938
+                                        <strong>Contact Number:</strong> (0968) 350 7067
                                     </p>
 
 

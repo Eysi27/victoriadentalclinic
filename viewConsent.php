@@ -61,7 +61,7 @@ error_reporting(0);
                             <input type="hidden" value="<?php echo $_GET['clientid']; ?>" id="clientId">
 
                             <div style="display: flex; align-items: center; margin-left: 30px; margin-top:0px;">
-                                <img src="img/vadc_logo.jpg" alt="Logo"
+                                <img src="img/vadc_whitebg.png" alt="Logo"
                                     style="max-height: 100px; margin-right: 20px;">
                                 <div>
                                     <h4 style="margin-bottom: 5px; font-weight: bold;">Victoria Advanced Dental Care</h4>

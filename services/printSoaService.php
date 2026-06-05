@@ -37,20 +37,23 @@ class ServiceClass
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo '
            <div class="row align-items-center">
-            <div class="col-lg-6 d-flex align-items-center" style="text-align:left;">
-                    <img src="img/white_logo_final.jpg" alt="Company Logo" style="height: 40px; margin-right: 10px;">
-                    <strong>Victoria Advanced Dental Care</strong>
+            <div class="col-lg-6 d-flex align-items-left" style="text-align:left;">
+
+                    <strong><h1>Victoria Advanced Dental Care</h1></strong>
+                
                 </div>
+                
+                
                 <div class="col-lg-6" style="text-align:right;">
                     Bringing you, your best smile!
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias Angeles City Pampanga PH 2009
+                    101 Iriga, Iriga City, Camarines Sur
                 </div>
                 <div class="col-lg-12">
-                    0927-605-8418 / 0960-437-5938
+                    (0968) 350 7067
                 </div>
             </div>
 

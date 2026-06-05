@@ -120,19 +120,20 @@ error_reporting(0);
 
 
                                     <div style="text-align:center;margin:0px;">
-                                        <img src="img/white_logo_final.jpg"
-                                            style="max-width:250px; align-items:center" />
+                                        <!-- <img src="img/vadc_whitebg.png" alt="Company Logo" class="img-fluid"
+                                            style="max-width:250px; align-items:center" /> -->
+                                           <strong> Victoria Advanced Dental Care</strong>
+                                    <br>    Since 1992  
                                     </div>
 
                                     <p style="text-align: center; color: black; margin: 0;font-size:13px;">
-                                        Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias<br>Angeles City Pampanga
-                                        PH 2009
+                                        101 Iriga, Iriga City, Camarines Sur
 
                                     </p>
 
                                     <p style="text-align: center; color: black; margin: 0;font-size:13px;">
 
-                                        <strong>Contact Number:</strong> 0927-605-8418 / 0960-437-5938
+                                        <strong>Contact Number:</strong> (0968) 350 7067
                                     </p>
 
 
@@ -186,7 +187,7 @@ error_reporting(0);
                                     </div>
 
 
-                                    -->
+                              
 
                                 </div>
                                 <div class="modal-footer d-print-none">

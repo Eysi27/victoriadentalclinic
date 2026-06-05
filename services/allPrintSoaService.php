@@ -43,7 +43,7 @@ class ServiceClass
             <div class="row">
                 <div class="col-lg-12">Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias
                                         Angeles City Pampanga PH 2009</div>
-                <div class="col-lg-12">0927-605-8418 / 0960-437-5938</div>
+                <div class="col-lg-12">(0968) 350 7067</div>
                 <hr>
                 <div class="col-lg-12" style="text-align:center;"><strong>Electronic Statement of Account - ESOA</strong></div>
             </div>

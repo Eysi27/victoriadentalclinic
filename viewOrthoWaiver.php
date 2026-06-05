@@ -70,7 +70,7 @@ error_reporting(0);
                                         Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias<br>
                                         Angeles City Pampanga PH 2009
                                         <br>
-                                        0927-605-8418 / 0960-437-5938
+                                        (0968) 350 7067
                                     </p>
                                 </div>
                             </div>
