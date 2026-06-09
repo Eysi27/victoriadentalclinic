@@ -6,18 +6,18 @@ date_default_timezone_set("Asia/Manila");
 class Database
 {
     // // local
-    private $host = "localhost";
-    private $db_name = "vadc_db";
-    private $username = "root";
-    private $password = '';
+    // private $host = "localhost";
+    // private $db_name = "vadc_db";
+    // private $username = "root";
+    // private $password = '';
 
 
     //prod
 
-    // private $host = "localhost";
-    // private $db_name = "smilesan_official";
-    // private $username = "smilesan_admin";
-    // private $password = 'G[aZ=F,G*~OT';
+    private $host = "localhost";
+    private $db_name = "victoria_system";
+    private $username = "victoria_user";
+    private $password = 'ZWUhzwcEI+){7&yL';
 
 
 
