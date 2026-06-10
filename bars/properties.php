@@ -6,7 +6,7 @@ $superuser = "admin-carryl";
 $dentist = [
     "Dr. Caryl Catangui Torres",
     "Doc Jao Briones",
-    "Doc Vem bernardo"
+    "Doc Vem Bernardo"
 ];
 
 ?>
