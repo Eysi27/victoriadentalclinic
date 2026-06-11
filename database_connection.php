@@ -1,7 +1,20 @@
 <?php
-$hostname = "216.218.206.40";
-$username = "kbfdenta_sysadmin";
-$password = '$ysAdmin2022';  
-$database = 'kbfdenta_sysdb';   
-$con=mysqli_connect($hostname,$username,$password,$database);    
-?>  
+
+// local
+// $hostname = "localhost";
+// $username = "root";
+// $password = '';
+// $database = 'vadc_db';
+// $con = mysqli_connect($hostname, $username, $password, $database);
+
+
+//prod
+$hostname = "localhost";
+$username = "victoria_user";
+$password = 'ZWUhzwcEI+){7&yL';
+$database = 'victoria_system';
+$con = mysqli_connect($hostname, $username, $password, $database);
+
+
+
+?>
