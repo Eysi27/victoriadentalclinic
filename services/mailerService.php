@@ -77,7 +77,7 @@ class ServiceClass
 
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: <servicebot@smilesandmore.ph>' . "\r\n";
+    $headers .= 'From: <official@victoria-advanced-dentalcare.com>' . "\r\n";
     mail($to, $subject, $msg, $headers);
   }
   //UNTIL THIS CODE
