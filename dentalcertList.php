@@ -12,8 +12,9 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    
 
-    <title>Victoria Advanced Dental Care</title>
+        <title>Victoria Dental Clinic</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,6 +29,8 @@ error_reporting(0);
     <link href="css/sortable.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/dentalcert.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/ssdc-icon.ico">
+
 
 </head>
 
@@ -51,15 +54,21 @@ error_reporting(0);
 
                     <!-- Page Heading -->
                     <div class="card shadow mb-12">
-                        <div class="card-header py-3 d-flex justify-content-between <?php echo $cards; ?>">
-                            <h6 class="m-0 font-weight-bold">Dental Certificate List</h6>
+                       <div class="card-header py-3 d-flex justify-content-between <?php echo $cards; ?>">
+    <h6 class="m-0 font-weight-bold">Dental Certificate List</h6>
 
+    <div>
+        <!-- Plus Button -->
+        <button class="btn btn-success btn-circle edit-btn" data-toggle="modal" data-target="#editExpenseModal">
+            <i class="fas fa-plus" title="Add Dental Cert"></i>
+        </button>
 
-                            <button class="btn btn-success btn-circle edit-btn" data-toggle="modal"
-                                data-target="#editExpenseModal">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
+        <!-- List Button -->
+        <!-- <a href="medCertTreatmentList.php" class="btn btn-warning btn-circle edit-btn">
+            <i class="fas fa-list" title="View Treatment List for Dental-Cert"></i>
+        </a> -->
+    </div>
+</div>
                         <div class="card-body">
                             <div class="card-header py-3 d-flex justify-content-between">
                                 <h6 class="m-0 font-weight-bold"></h6>
@@ -122,19 +131,18 @@ error_reporting(0);
 
 
                                     <div style="text-align:center;margin:0px;">
-                                        <img src="img/white_logo_final.jpg"
+                                        <img src="img/<?php echo $headerlogo; ?>"
                                             style="max-width:250px; align-items:center" />
                                     </div>
 
                                     <p style="text-align: center; color: black; margin: 0;font-size:13px;">
-                                        Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias<br>Angeles City Pampanga
-                                        PH 2009
+                                        <?php echo $formheaderaddress; ?>
 
                                     </p>
 
                                     <p style="text-align: center; color: black; margin: 0;font-size:13px;">
 
-                                        <strong>Contact Number:</strong> (0968) 350 7067
+                                        <strong>Contact Number:</strong> <?php echo $contact; ?>
                                     </p>
 
 
@@ -188,7 +196,7 @@ error_reporting(0);
                                     </div>
 
 
-                                    -->
+        
 
                                 </div>
                                 <div class="modal-footer d-print-none">
@@ -231,11 +239,14 @@ error_reporting(0);
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>Patient Name</label>
-                                                <input type="text" class="form-control" name="name" id="modal-name">
+                                                 <select class="form-control" name="name" id="modal-name" onchange="getProfileDetails(this.value)">
+                                                    <option value="1">profile1</option>
+                                                    <option value="2">profile2</option>
+                                                </select>
                                             </div>
 
                                             <div class="form-group col-md-6">
-                                                <label>Date</label>
+                                                <label>Last visit</label>
                                                 <input type="date" class="form-control" name="date" id="modal-date">
                                             </div>
 
@@ -256,16 +267,44 @@ error_reporting(0);
                                             </div>
                                         </div>
 
+        <!-- Standalone TreatmentList Field -->
+                                        <div class="form-group">
+                                            <label>Treatment List:</label>
+                                            <div class="d-flex">
+                                                <select class="form-control mr-2" name="medicine" id="modal-treatment"
+                                                    style="flex: 1;">
+                                                    <option value="1">Treatment1</option>
+                                                    <option value="2">Treatment2</option>
+                                                </select>
+                                                <input type="text" class="form-control mr-2" name="toothnumber" id="modal-toothnumber" 
+               placeholder="Tooth number" style="max-width: 100px;">
+                                                <button type="button" class="btn btn-primary"
+                                                    onclick="AddMed();">Add</button>
+                                            </div>
+                                        </div>
 
+                                        <!-- Separate block for table (not inside form-group) -->
+                                        <div class="table-responsive mt-3">
+                                            <table class="table table-bordered" id="medicine-table">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        
+                                                        <th>Treatment</th>
+                                                        <th>Tooth number</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="prescriptionsubList">
+                                                    <!-- JS rows go here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
                                         <div class="row">
 
+                                  
+                                  
                                             <div class="form-group col-md-12">
-                                                <label for="modal-address">Treatment:</label>
-                                                <textarea class="form-control" name="treatment" id="modal-treatment"
-                                                    rows="3"></textarea>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label for="modal-address">Diagnosis:</label>
+                                                <label for="modal-remarks">Remarks/Recommendations:</label>
                                                 <textarea class="form-control" name="treatment" id="modal-diagnosis"
                                                     rows="3"></textarea>
                                             </div>
@@ -356,7 +395,8 @@ error_reporting(0);
             <script src="js/custom-v2.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/dentalCertListController.js"></script>
+            <!-- <script src="controllers/activityLogsController.js"></script> -->
+            <script src="controllers/dentalCertListController-v2.js"></script>
             <!-- <script src="controllers/deleteClientProfileController.js"></script> -->
             <script src="js/sortable.js"></script>
 

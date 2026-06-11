@@ -1,9 +1,9 @@
 <?php
-session_start();
 require_once('databaseService.php');
+session_start();
 $service = new ServiceClass();
 
-$result = $service->process($_POST);
+$result = $service->process();
 
 class ServiceClass
 {
@@ -22,33 +22,24 @@ class ServiceClass
         return $stmt;
     }
     //DO NOT INCLUDE THIS CODE
-    public function process($data)
+    public function process()
     {
 
-        $rxid = $data['id'];
 
-        $query = "delete from dentalcertificate where certid=:id";
+
+        $query = "select * from clientprofile order by lname desc";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $rxid, PDO::PARAM_INT);
 
         $stmt->execute();
+        echo '<option value="">Profile</option>';
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $fullname = $row["lname"] . ', ' . $row["fname"] . ' ' . $row["mdname"];
+
+                echo '<option value="'.$fullname.'">'.$fullname.'</option>';
 
 
-        echo 'success';
-
-
-
+            }
+        }
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-?>

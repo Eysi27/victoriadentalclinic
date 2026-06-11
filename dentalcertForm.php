@@ -13,7 +13,7 @@ error_reporting(0);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Victoria Advanced Dental Care</title>
+    <title>Smile Save Dental Care</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,6 +26,8 @@ error_reporting(0);
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+      <link rel="icon" type="image/png" href="img/ssdc-icon.ico">
+
 
 </head>
 
@@ -48,7 +50,7 @@ error_reporting(0);
                 <div class="container-fluid" id="content-table">
 
                     <div class="row">
-                        <div class="col-lg-9  mx-auto">
+                        <div class="col-lg-6  mx-auto">
                             <!-- Page Heading -->
                             <div class="card shadow mb-12">
                                 <div class="card-header py-3 <?php echo $cards; ?>">
@@ -56,8 +58,14 @@ error_reporting(0);
 
 
                                     <button id="divPrinter" class="btn btn-secondary btn-sm btn-circle float-right"
-                                        onclick="printDiv('bodyResult')" title="Print Certificate"><i
-                                            class="fas fa-print"></i></button>
+                                        onclick="printDiv('bodyResult')" title="Print Certificate">
+                                    
+                                        <i class="fas fa-print"></i></button>
+
+                                        <a href="dentalcertList.php"><button class="btn btn-secondary btn-sm btn-circle float-right"
+                                         title="Back to List">
+                                    
+                                        <i class="fas fa-times-circle"></i></button></a>
 
 
 
@@ -112,7 +120,7 @@ error_reporting(0);
             <script src="controllers/sessionController.js"></script>
             <script src="controllers/dentalcertformController.js"></script>
             <script src="controllers/divPrinterController-v1.js"></script>
-            <script src="js/signature.js"></script>
+            <script src="js/sign.js"></script>
             <script src="js/custom-v2.js"></script>
 
 
