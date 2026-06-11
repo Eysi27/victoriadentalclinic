@@ -3,7 +3,7 @@ $tooth = $_GET['tooth'];
 $clientId = (int) $_GET['clientid'];
 
 // $conn = new mysqli("localhost", "root", "", "sam_db");
-$conn = new mysqli("localhost", "smilesan_admin", "G[aZ=F,G*~OT", "smilesan_official");
+$conn = new mysqli("localhost", "victoria_user", "ZWUhzwcEI+){7&yL", "victoria_system");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
