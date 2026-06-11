@@ -30,6 +30,7 @@ error_reporting(0);
 
     <!-- CSS for full calender -->
     <link href="css/calendar.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
 
 </head>
 

@@ -29,7 +29,7 @@ error_reporting(0);
     <link href="css/sortable.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/dentalcert.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/ssdc-icon.ico">
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico">
 
 
 </head>

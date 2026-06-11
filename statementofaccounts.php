@@ -25,6 +25,7 @@ error_reporting(0);
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
 
 </head>
 

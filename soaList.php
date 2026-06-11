@@ -27,6 +27,7 @@ error_reporting(0);
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="css/sortable.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
 </head>
 
 <body id="page-top">
