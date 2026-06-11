@@ -5,7 +5,7 @@ echo '
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
              
-        <img src="img/white_logo_final.jpg" class="img-fluid" style="max-height: 30px;">
+        <img src="img/vadc_whitebg.png" class="img-fluid" style="max-height: 30px;">
    
         </div>
     </div>
