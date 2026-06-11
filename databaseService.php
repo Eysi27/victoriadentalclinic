@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 date_default_timezone_set("Asia/Manila");
 class Database
 {
-    // // local
+   // local
     // private $host = "localhost";
     // private $db_name = "vadc_db";
     // private $username = "root";
