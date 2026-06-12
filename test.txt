@@ -4,8 +4,8 @@
 
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php81___lsphp .php .php8 .phtml
-  AddHandler application/x-httpd-php .php .php8 .phtml
-  AddType application/x-httpd-php .php .php8 .phtml
+  AddHandler application/x-httpd-php .php .php5 .php7 .php8 .phtml
+  AddType application/x-httpd-php .php .php5 .php7 .php8 .phtml
 </IfModule>
 
 <IfModule mod_mime.c>
@@ -13,7 +13,17 @@
 </IfModule>
 
 <IfModule mod_fcgid.c>
-  AddHandler fcgid-script .php
+  AddHandler fcgid-script .php .php5 .php7 .php8
 </IfModule>
+
+<IfModule mod_actions.c>
+  AddHandler application/x-httpd-php .php
+</IfModule>
+
+<FilesMatch "\.(php|php5|php7|php8)$">
+  SetHandler application/x-httpd-php
+</FilesMatch>
+
+Options +FollowSymLinks +ExecCGI
 
 # php -- END cPanel-generated handler, do not edit
