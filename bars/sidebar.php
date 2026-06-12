@@ -99,6 +99,7 @@ if ($_SESSION["account_type"] == 0) {
 
 <a class="collapse-item" href="incomedaterange.php">Income Statement</a>
 <a class="collapse-item" href="dailytransactionsummary.php">Daily Transaction Summary</a>
+<a class="collapse-item" href="lasttreatment3months.php">Last Treatment > 3 Months</a>
 <a class="collapse-item" href="monthlyexpensesummary.php">Monthly Expense Summary</a>
           
  
@@ -217,6 +218,7 @@ if ($_SESSION["account_type"] == 0) {
 
 <a class="collapse-item" href="incomedaterange.php">Income Statement</a>
 <a class="collapse-item" href="dailytransactionsummary.php">Daily Transaction Summary</a>
+<a class="collapse-item" href="lasttreatment3months.php">Last Treatment > 3 Months</a>
 <a class="collapse-item" href="monthlyexpensesummary.php">Monthly Expense Summary</a>
           
  
