@@ -643,9 +643,9 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Are you nursing? -->
+                                            <!-- Are you breastfeeding? -->
                                             <div class="col-lg-6 mb-3">
-                                                <label class="form-label mb-0">Are you nursing?</label>
+                                                <label class="form-label mb-0">Are you breastfeeding?</label>
                                             </div>
                                             <div class="col-lg-6 mb-3">
                                                 <div class="form-check form-check-inline">
