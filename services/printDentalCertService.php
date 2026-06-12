@@ -51,7 +51,7 @@ class ServiceClass
           h2 {
             -webkit-print-color-adjust: exact !important; /* For Chrome, Safari, Edge */
             print-color-adjust: exact !important;         /* Standard */
-            background-color: skyblue !important;
+            background-color: darkblue !important;
             color: white !important;
           }
         }
@@ -61,7 +61,7 @@ class ServiceClass
 
            <!-- Centered Logo and Clinic Name -->
     <div style="text-align: center; margin-bottom: 0.5em;">
-        <img src="img/vadc_whitebg.png" alt="Company Logo" style="height: 60px; display: inline-block; vertical-align: middle; margin-bottom: 0.3em;">
+        <img src="img/vadc_whitebg.png" alt="Company Logo" style="height: 100px; display: inline-block; vertical-align: middle; margin-bottom: 0.3em;">
         <div style="font-size: 20pt; font-weight: bold;">Victoria Advanced Dental Care</div>
     </div>
 
@@ -72,7 +72,7 @@ class ServiceClass
     </div>
 
             <!-- Certificate Title -->
-            <h2 style="text-align: center; font-size: 18pt; margin-top: 0; margin-bottom: 1em; background-color: skyblue; color: white; padding: 5px; border-radius: 1px;">
+            <h2 style="text-align: center; font-size: 18pt; margin-top: 0; margin-bottom: 1em; background-color: darkblue; color: white; padding: 5px; border-radius: 1px;">
                 D E N T A L   &nbsp;&nbsp;&nbsp; C E R T I F I C A T E
             </h2>
 
