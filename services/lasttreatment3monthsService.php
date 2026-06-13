@@ -137,7 +137,7 @@ class ServiceClass
                     </div>';
             }
         } else {
-            echo '<div class="alert alert-info">No patients found with last treatment more than 3 months before the selected date.</div>';
+            echo '<div class="alert alert-info">No patients found with last treatment more than 5 months before the selected date.</div>';
         }
 
         echo '<div style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 8px;">
@@ -148,7 +148,7 @@ class ServiceClass
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                     <span><strong>Threshold Date:</strong></span>
-                    <span>' . htmlspecialchars(date('Y/m/d', strtotime("-3 months", strtotime($asOf)))) . '</span>
+                    <span>' . htmlspecialchars(date('Y/m/d', strtotime("-5 months", strtotime($asOf)))) . '</span>
                 </div>
                 <div style="display: flex; justify-content: space-between;">
                     <span><strong>Total Patients:</strong></span>

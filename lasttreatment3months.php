@@ -60,7 +60,7 @@ error_reporting(0);
                                 <input type="button" class="btn btn-primary ml-2" onclick="printDiv('daterange')"
                                     value="Print">
                             </div>
-                            <h6 class="m-0 font-weight-bold">PATIENTS WITH LAST TREATMENT OVER 3 MONTHS</h6>
+                            <h6 class="m-0 font-weight-bold">PATIENTS WITH LAST TREATMENT OVER 5 MONTHS</h6>
 
                         </div>
 
