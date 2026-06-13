@@ -75,7 +75,7 @@ error_reporting(0);
                                 </div>
                                 <hr>
                                 <div style="text-align:center;">
-                                    <h2 style="margin:0; font-weight:bold;">LAST TREATMENT OVER 3 MONTHS REPORT</h2>
+                                    <h2 style="margin:0; font-weight:bold;">LAST TREATMENT OVER 5 MONTHS REPORT</h2>
                                     <h5 id="h3id" style="margin:0;"></h5>
                                 </div>
                                 <div style="width:180px;"></div>

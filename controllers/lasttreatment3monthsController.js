@@ -62,7 +62,7 @@ function confirmNotifyPatients() {
         var subject = 'Time for your dental cleaning';
         var greetings = fullName || 'Patient';
         var msg = 'Dear ' + greetings + ',\n\n' +
-            'We noticed your last Oral Prophylaxis cleaning was over 3 months ago. ' +
+            'We noticed your last Oral Prophylaxis cleaning was over 5 months ago. ' +
             'Please schedule a revisit for a cleaning at Victoria Advanced Dental Care.\n\n' +
             'Thank you,\nVictoria Advanced Dental Care';
 

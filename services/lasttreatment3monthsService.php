@@ -68,7 +68,7 @@ class ServiceClass
                                     <th>Client ID</th>
                                     <th>Full Name</th>
                                     <th>Email</th>
-                                    <th>HMO</th>
+                                    <th>Mobile#</th>
                                     <th>Dentist</th>
                                     <th>Last Treatment</th>
                                     <th>SOA ID</th>
@@ -79,11 +79,11 @@ class ServiceClass
                             </thead>
                             <tbody>';
 
-                $query = "SELECT cp.clientid, cp.lname, cp.fname, cp.mdname, cp.emailAddress, COALESCE(tsub.hmo, '') AS hmo, tsub.treatment, tsub.price, tsoa.soaid, tsoa.dentist, tsoa.date AS last_treatment_date
+                $query = "SELECT cp.clientid, cp.lname, cp.fname, cp.mdname, cp.emailAddress, cp.mobileNumber, tsub.treatment, tsub.price, tsoa.soaid, tsoa.dentist, tsoa.date AS last_treatment_date
                     FROM clientprofile cp
                     INNER JOIN treatmentsub tsub ON tsub.clientid = cp.clientid
                     INNER JOIN treatmentsoa tsoa ON tsoa.soaid = tsub.soaid
-                    WHERE tsoa.date <= DATE_SUB(:a, INTERVAL 3 MONTH)
+                    WHERE tsoa.date <= DATE_SUB(:a, INTERVAL 5 MONTH)
                       AND LOWER(tsub.treatment) LIKE '%oral prophylaxis%'
                       AND tsub.tsubid = (
                           SELECT tsub2.tsubid
@@ -115,13 +115,13 @@ class ServiceClass
                         $treatmentDate = new DateTime($lastDate);
                         $daysSince = $treatmentDate->diff($asOfDate)->days;
 
-                        $hmoDisplay = empty($row['hmo']) ? '-' : htmlspecialchars($row['hmo']);
+                        $mobileDisplay = empty($row['mobileNumber']) ? '-' : htmlspecialchars($row['mobileNumber']);
 
                         echo '<tr style="color: black;">
                             <td>' . htmlspecialchars($row['clientid']) . '</td>
                             <td>' . htmlspecialchars($fullName) . '</td>
                             <td>' . htmlspecialchars($row['emailAddress']) . '</td>
-                            <td>' . $hmoDisplay . '</td>
+                            <td>' . $mobileDisplay . '</td>
                             <td>' . htmlspecialchars($row['dentist']) . '</td>
                             <td>' . htmlspecialchars($row['treatment']) . '</td>
                             <td>' . htmlspecialchars($row['soaid']) . '</td>
