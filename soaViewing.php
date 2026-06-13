@@ -117,6 +117,7 @@ error_reporting(0);
                                                     <option value="Credit Card">Credit Card</option>
                                                     <option value="Debit Card">Debit Card</option>
                                                     <option value="Cheque">Cheque</option>
+                                                    <option value="Discount">Discount</option>
 
 
 
