@@ -138,7 +138,8 @@
     max-width: 95% !important;
     /* or any %/px you prefer */
 }
+
 .bg-gold {
-    background-color: rgba(4, 11, 71, 0.884) !important;
+    background-color: #011f4b !important;
     color: white !important;
 }
