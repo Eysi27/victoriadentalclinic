@@ -83,7 +83,7 @@ error_reporting(0);
 
             <script src="js/custom-v2.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/medHistoryUpdateController-v1.js"></script>
+            <script src="controllers/medHistoryUpdateController-v2.js"></script>
             <script src="controllers/medHistoryViewController-v1.js"></script>
 
 
