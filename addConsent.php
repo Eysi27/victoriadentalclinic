@@ -62,9 +62,7 @@ error_reporting(0);
                                     <div>
                                         <h4 class="mb-1"><strong>Victoria Advanced Dental Care</strong>
                                         </h4>
-                                        <p class="mb-0">Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias
-                                            Angeles
-                                            City Pampanga PH 2009</p>
+                                        <p class="mb-0">101 Iriga, Iriga City, Camarines Sur</p>
                                     </div>
                                 </div>
                             </div>

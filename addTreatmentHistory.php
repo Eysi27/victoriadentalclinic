@@ -64,8 +64,7 @@ error_reporting(0);
                                 <div class="col-lg-6" style="text-align:right;">Bringing you, your best smile!</div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12"> Stall B Josefa St. Josefaville 1 Subd Brgy Malabanias Angeles
-                                    City Pampanga PH 2009</div>
+                                <div class="col-lg-12"> 101 Iriga, Iriga City, Camarines Sur</div>
                                 <div class="col-lg-12">(0968) 350 7067</div>
                                 <hr>
                                 <div class="col-lg-12" style="text-align:center;"><strong>Electronic Statement of
