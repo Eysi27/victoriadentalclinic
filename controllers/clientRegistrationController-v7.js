@@ -128,46 +128,46 @@ function validateHealthForm() {
     }
 
     // 3. Serious illness
-    const seriousIllness = getRadioValue("seriousIllness");
-    const illnessConditionInput = document.getElementById("illnessCondition");
-    const illnessCondition = illnessConditionInput.value.trim();
-    if (!seriousIllness) {
-        return focusAndToast(document.getElementsByName("seriousIllness")[0], "Please answer if you have had serious illness or surgical operation.");
-    } else if (seriousIllness === "yes" && illnessCondition === "") {
-        return focusAndToast(illnessConditionInput, "Please describe the illness or operation.");
-    }
+    // const seriousIllness = getRadioValue("seriousIllness");
+    // const illnessConditionInput = document.getElementById("illnessCondition");
+    // const illnessCondition = illnessConditionInput.value.trim();
+    // if (!seriousIllness) {
+    //     return focusAndToast(document.getElementsByName("seriousIllness")[0], "Please answer if you have had serious illness or surgical operation.");
+    // } else if (seriousIllness === "yes" && illnessCondition === "") {
+    //     return focusAndToast(illnessConditionInput, "Please describe the illness or operation.");
+    // }
 
     // 4. Hospitalized
-    const hospitalized = getRadioValue("hospitalized");
-    const hospitalizedConditionInput = document.getElementById("hospitalizedCondition");
-    const hospitalizedCondition = hospitalizedConditionInput.value.trim();
-    if (!hospitalized) {
-        return focusAndToast(document.getElementsByName("hospitalized")[0], "Please answer if you have ever been hospitalized.");
-    } else if (hospitalized === "yes" && hospitalizedCondition === "") {
-        return focusAndToast(hospitalizedConditionInput, "Please provide the date and reason for hospitalization.");
-    }
+    // const hospitalized = getRadioValue("hospitalized");
+    // const hospitalizedConditionInput = document.getElementById("hospitalizedCondition");
+    // const hospitalizedCondition = hospitalizedConditionInput.value.trim();
+    // if (!hospitalized) {
+    //     return focusAndToast(document.getElementsByName("hospitalized")[0], "Please answer if you have ever been hospitalized.");
+    // } else if (hospitalized === "yes" && hospitalizedCondition === "") {
+    //     return focusAndToast(hospitalizedConditionInput, "Please provide the date and reason for hospitalization.");
+    // }
 
     // 5. Medication
-    const medication = getRadioValue("medication");
-    const medicationConditionInput = document.getElementById("medicationCondition");
-    const medicationCondition = medicationConditionInput.value.trim();
-    if (!medication) {
-        return focusAndToast(document.getElementsByName("medication")[0], "Please answer if you are taking any medication.");
-    } else if (medication === "yes" && medicationCondition === "") {
-        return focusAndToast(medicationConditionInput, "Please specify the medication you are taking.");
-    }
+    // const medication = getRadioValue("medication");
+    // const medicationConditionInput = document.getElementById("medicationCondition");
+    // const medicationCondition = medicationConditionInput.value.trim();
+    // if (!medication) {
+    //     return focusAndToast(document.getElementsByName("medication")[0], "Please answer if you are taking any medication.");
+    // } else if (medication === "yes" && medicationCondition === "") {
+    //     return focusAndToast(medicationConditionInput, "Please specify the medication you are taking.");
+    // }
 
     // 6. Tobacco
-    const tobaccoUse = getRadioValue("tobaccoUse");
-    if (!tobaccoUse) {
-        return focusAndToast(document.getElementsByName("tobaccoUse")[0], "Please answer if you use tobacco products.");
-    }
+    // const tobaccoUse = getRadioValue("tobaccoUse");
+    // if (!tobaccoUse) {
+    //     return focusAndToast(document.getElementsByName("tobaccoUse")[0], "Please answer if you use tobacco products.");
+    // }
 
     // 7. Alcohol
-    const substanceUse = getRadioValue("substanceUse");
-    if (!substanceUse) {
-        return focusAndToast(document.getElementsByName("substanceUse")[0], "Please answer if you consume alcoholic beverages.");
-    }
+    // const substanceUse = getRadioValue("substanceUse");
+    // if (!substanceUse) {
+    //     return focusAndToast(document.getElementsByName("substanceUse")[0], "Please answer if you consume alcoholic beverages.");
+    // }
 
     // Question 8: Allergies
     const allergicTo = getRadioValue("allergicTo");
@@ -293,7 +293,7 @@ function setDentistSignature() {
 
     var dentistName = document.getElementById("dentistName").value;
 
-    if (dentistName == 'Dr. Nikki Sarmiento') {
+    if (dentistName == 'Dr. Caryl Catangui Torres') {
 
         document.getElementById("dentist-signature-box").innerHTML = '<img src="img/e-sign.png" alt="signature" style = "height: 100%; width: auto; display: block margin: 0 auto;" > ';
     } else {
@@ -315,7 +315,7 @@ function submitClientform(type) {
         msg = 'Incomplete Signature';
     } else if (dentistName == '') {
         msg = "Dentist Name is required.";
-    } else if (dentistName != 'Dr. Nikki Sarmiento' && dentistSignature == '') {
+    } else if (dentistName != 'Dr. Caryl Catangui Torres' && dentistSignature == '') {
         msg = "Dentist Signature is required.";
     }
 
@@ -414,17 +414,17 @@ function getMedicalFormValues() {
         underTreatment: document.querySelector('input[name="underTreatment"]:checked')?.value || null,
         treatmentCondition: document.getElementById("treatmentCondition").value.trim() || null,
 
-        seriousIllness: document.querySelector('input[name="seriousIllness"]:checked')?.value || null,
-        illnessCondition: document.getElementById("illnessCondition").value.trim() || null,
+        // seriousIllness: document.querySelector('input[name="seriousIllness"]:checked')?.value || null,
+        // illnessCondition: document.getElementById("illnessCondition").value.trim() || null,
 
-        hospitalized: document.querySelector('input[name="hospitalized"]:checked')?.value || null,
-        hospitalizedCondition: document.getElementById("hospitalizedCondition").value.trim(),
+        // hospitalized: document.querySelector('input[name="hospitalized"]:checked')?.value || null,
+        // hospitalizedCondition: document.getElementById("hospitalizedCondition").value.trim(),
 
-        medication: document.querySelector('input[name="medication"]:checked')?.value || null,
-        medicationCondition: document.getElementById("medicationCondition").value.trim() || null,
+        // medication: document.querySelector('input[name="medication"]:checked')?.value || null,
+        // medicationCondition: document.getElementById("medicationCondition").value.trim() || null,
 
-        tobaccoUse: document.querySelector('input[name="tobaccoUse"]:checked')?.value || null,
-        substanceUse: document.querySelector('input[name="substanceUse"]:checked')?.value || null,
+        // tobaccoUse: document.querySelector('input[name="tobaccoUse"]:checked')?.value || null,
+        // substanceUse: document.querySelector('input[name="substanceUse"]:checked')?.value || null,
 
         allergies: document.querySelector('input[name="allergicTo"]:checked')?.value || null,
         allergiesCondition: Array.from(document.querySelectorAll('input[name="allergies"]:checked')).map(cb => cb.value) || null,
@@ -434,7 +434,7 @@ function getMedicalFormValues() {
         // bleedingDisorder: document.querySelector('input[name="bleedingDisorder"]:checked')?.value || null,
         pregnant: document.querySelector('input[name="pregnant"]:checked')?.value || null,
         nursing: document.querySelector('input[name="nursing"]:checked')?.value || null,
-        birthControl: document.querySelector('input[name="birthControl"]:checked')?.value || null,
+        // birthControl: document.querySelector('input[name="birthControl"]:checked')?.value || null,
 
         // Collect q1 - q27 in an array
         medicalHistory: Array.from({ length: 37 }, (_, i) => {

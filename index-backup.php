@@ -372,13 +372,163 @@
                                             </div>
                                         </div>
 
-                                       
-                                      <!-- Deleted question 3 here -->
-                                      <!-- Deleted question 4 here -->
-                                      <!-- Deleted question 5 here -->
-                                      <!-- Deleted question 6 here -->
-                                      <!-- Deleted question 7 here -->
-                                     
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">3. Have you ever had serious
+                                                        illness
+                                                        or surgical operation?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessYes" value="yes"
+                                                        onclick="toggleCondition(true, 'illnessCondition')">
+                                                    <label class="form-check-label" for="seriousIllnessYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessNo" value="no"
+                                                        onclick="toggleCondition(false, 'illnessCondition')">
+                                                    <label class="form-check-label" for="seriousIllnessNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="illnessCondition" class="form-label">- If so, what
+                                                    illness
+                                                    or operation?</label>
+                                                <input type="text" id="illnessCondition" name="illnessCondition"
+                                                    class="form-control" placeholder="Describe the illness or operation"
+                                                    disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">4. Have you ever been
+                                                        hospitalized?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedYes" value="yes"
+                                                        onclick="toggleCondition(true, 'hospitalizedCondition')">
+                                                    <label class="form-check-label" for="hospitalizedYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedNo" value="no"
+                                                        onclick="toggleCondition(false, 'hospitalizedCondition')">
+                                                    <label class="form-check-label" for="hospitalizedNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="hospitalizedCondition" class="form-label">- If so, when
+                                                    and
+                                                    why?</label>
+                                                <input type="text" id="hospitalizedCondition"
+                                                    name="hospitalizedCondition" class="form-control"
+                                                    placeholder="Provide the date and reason for hospitalization"
+                                                    disabled>
+                                            </div>
+                                        </div>
+                                        <!--5-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">5. Are you taking any
+                                                        prescription/non-prescription medication?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationYes" value="yes"
+                                                        onclick="toggleCondition(true, 'medicationCondition')">
+                                                    <label class="form-check-label" for="medicationYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationNo" value="no"
+                                                        onclick="toggleCondition(false, 'medicationCondition')">
+                                                    <label class="form-check-label" for="medicationNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="medicationCondition" class="form-label">- If so, please
+                                                    specify:</label>
+                                                <input type="text" id="medicationCondition" name="medicationCondition"
+                                                    class="form-control" placeholder="List medications being taken"
+                                                    disabled>
+                                            </div>
+                                        </div>
+                                        <!--6-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">6. Do you use tobacco
+                                                        products?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseYes" value="yes">
+                                                    <label class="form-check-label" for="tobaccoUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseNo" value="no">
+                                                    <label class="form-check-label" for="tobaccoUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--7-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">7. Do you use alcohol, cocaine or
+                                                        other dangerous drugs?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseYes" value="yes">
+                                                    <label class="form-check-label" for="substanceUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseNo" value="no">
+                                                    <label class="form-check-label" for="substanceUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--8-->
                                         <div class="row">
                                             <!-- Question Label -->
@@ -511,7 +661,22 @@
                                             </div>
 
                                             <!-- Are you taking birth control pills? -->
-                                          
+                                            <div class="col-lg-6 mb-3">
+                                                <label class="form-label mb-0">Are you taking birth control
+                                                    pills?</label>
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlYes" value="yes">
+                                                    <label class="form-check-label" for="birthControlYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlNo" value="no">
+                                                    <label class="form-check-label" for="birthControlNo">No</label>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <hr>
