@@ -89,9 +89,45 @@ class ServiceClass
     <div style="width: 50%;"><strong>' . ($row["treatmentCondition"] === "null" || empty($row["treatmentCondition"]) ? "<em>None specified</em>" : htmlspecialchars($row["treatmentCondition"])) . '</strong></div>
 </div>
 
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">3. Have you ever had serious illness or surgical operation?</div>
+    <div style="width: 50%;"><strong>' . ($row["seriousIllness"] === "yes" ? "Yes" : ($row["seriousIllness"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
+</div>
 
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">- If so, what illness or operation?</div>
+    <div style="width: 50%;"><strong>' . ($row["illnessCondition"] === "null" || empty($row["illnessCondition"]) ? "<em>None specified</em>" : htmlspecialchars($row["illnessCondition"])) . '</strong></div>
+</div>
 
-';
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">4. Have you ever been hospitalized?</div>
+    <div style="width: 50%;"><strong>' . ($row["hospitalized"] === "yes" ? "Yes" : ($row["hospitalized"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
+</div>
+
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">- If so, when and why?</div>
+    <div style="width: 50%;"><strong>' . ($row["hospitalizedCondition"] === "null" || empty($row["hospitalizedCondition"]) ? "<em>None specified</em>" : htmlspecialchars($row["hospitalizedCondition"])) . '</strong></div>
+</div>
+
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">5. Are you taking any prescription/non-prescription medication?</div>
+    <div style="width: 50%;"><strong>' . ($row["medication"] === "yes" ? "Yes" : ($row["medication"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
+</div>
+
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">- If so, please specify:</div>
+    <div style="width: 50%;"><strong>' . ($row["medicationCondition"] === "null" || empty($row["medicationCondition"]) ? "<em>None specified</em>" : htmlspecialchars($row["medicationCondition"])) . '</strong></div>
+</div>
+
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">6. Do you use tobacco products?</div>
+    <div style="width: 50%;"><strong>' . ($row["tobaccoUse"] === "yes" ? "Yes" : ($row["tobaccoUse"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
+</div>
+
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">7. Do you use alcohol, cocaine or other dangerous drugs?</div>
+    <div style="width: 50%;"><strong>' . ($row["substanceUse"] === "yes" ? "Yes" : ($row["substanceUse"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
+</div>';
 
 
 
@@ -163,7 +199,7 @@ class ServiceClass
     <!-- Are you nursing? -->
     <div style="display: flex; margin-bottom: 6px;">
         <div style="width: 50%; display: flex; align-items: center;">
-            Are you breastfeeding?
+            Are you nursing?
         </div>
         <div style="width: 50%; display: flex; align-items: center;">
             <strong>' . (
@@ -174,7 +210,17 @@ class ServiceClass
     </div>
 
     <!-- Are you taking birth control pills? -->
-
+    <div style="display: flex; margin-bottom: 6px;">
+        <div style="width: 50%; display: flex; align-items: center;">
+            Are you taking birth control pills?
+        </div>
+        <div style="width: 50%; display: flex; align-items: center;">
+            <strong>' . (
+                        $row["birthControl"] === "yes" ? "Yes" :
+                        ($row["birthControl"] === "no" ? "No" : "<em>Not specified</em>")
+                    ) . '</strong>
+        </div>
+    </div>
 </div>
 
 <hr style="margin: 10 30px;">

@@ -147,12 +147,7 @@ error_reporting(0);
                             <br>
                             <hr>
                             <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                           
                             <!-- Page Heading -->
                             <div style="text-align:center;">
                                 <h1 class="h3">Informed Consent</h1>

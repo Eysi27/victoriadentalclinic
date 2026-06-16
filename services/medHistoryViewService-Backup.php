@@ -164,7 +164,227 @@ class ServiceClass
                                             </div>
                                         </div>
 
-                                    
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">3. Have you ever had serious
+                                                        illness
+                                                        or surgical operation?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessYes" value="yes"
+                                                        onclick="toggleCondition(true, \'illnessCondition\')" ';
+                    if ($row['seriousIllness'] === 'yes')
+                        echo 'checked';
+                    echo '>
+                                                    <label class="form-check-label" for="seriousIllnessYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessNo" value="no"
+                                                        onclick="toggleCondition(false, \'illnessCondition\')" ';
+                    if ($row['seriousIllness'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="seriousIllnessNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="illnessCondition" class="form-label">- If so, what
+                                                    illness
+                                                    or operation?</label>
+                                                <input type="text" id="illnessCondition" name="illnessCondition"
+                                                    class="form-control" placeholder="Describe the illness or operation"
+                                                    value="';
+                    if ($row['illnessCondition'] === 'null' || empty($row['illnessCondition'])) {
+                        echo '"';
+                    } else {
+                        echo htmlspecialchars($row['illnessCondition']) . '"';
+                    }
+                    if ($row['seriousIllness'] === 'no') {
+                        echo ' disabled';
+                    }
+                    echo '
+                    >
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">4. Have you ever been
+                                                        hospitalized?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedYes" value="yes"
+                                                        onclick="toggleCondition(true, \'hospitalizedCondition\')"
+                                                        ';
+                    if ($row['hospitalized'] === 'yes') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="hospitalizedYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedNo" value="no"
+                                                        onclick="toggleCondition(false, \'hospitalizedCondition\')" ';
+                    if ($row['hospitalized'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="hospitalizedNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="hospitalizedCondition" class="form-label">- If so, when
+                                                    and
+                                                    why?</label>
+                                                <input type="text" id="hospitalizedCondition"
+                                                    name="hospitalizedCondition" class="form-control"
+                                                    placeholder="Provide the date and reason for hospitalization" value="'
+                        . (($row['hospitalizedCondition'] === 'null' || empty($row['hospitalizedCondition'])) ? '' : htmlspecialchars($row['hospitalizedCondition'])) . '"';
+                    if ($row['hospitalized'] === 'no') {
+                        echo 'disabled';
+                    }
+                    echo '>
+                                            </div>
+                                        </div>
+                                        <!--5-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">5. Are you taking any
+                                                        prescription/non-prescription medication?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationYes" value="yes"
+                                                        onclick="toggleCondition(true, \'medicationCondition\')" ';
+                    if ($row['medication'] === 'yes') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="medicationYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationNo" value="no"
+                                                        onclick="toggleCondition(false, \'medicationCondition\')" ';
+                    if ($row['medication'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="medicationNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="medicationCondition" class="form-label">- If so, please
+                                                    specify:</label>
+                                                <input type="text" id="medicationCondition" name="medicationCondition"
+                                                    class="form-control" placeholder="List medications being taken"
+                                                    value="';
+                    if ($row['medicationCondition'] === 'null' || empty($row['medicationCondition'])) {
+                        echo '"';
+                    } else {
+                        echo htmlspecialchars($row['medicationCondition']) . '"';
+                    }
+                    if ($row['medication'] === 'no') {
+                        echo ' disabled';
+                    }
+                    echo '>
+                                            </div>
+                                        </div>
+                                        <!--6-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">6. Do you use tobacco
+                                                        products?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseYes" value="yes" ';
+                    if ($row['tobaccoUse'] === 'yes') {
+                        echo 'checked';
+                    }
+                    echo '
+                                >
+                                                    <label class="form-check-label" for="tobaccoUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseNo" value="no" ';
+                    if ($row['tobaccoUse'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="tobaccoUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--7-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">7. Do you use alcohol, cocaine or
+                                                        other dangerous drugs?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseYes" value="yes" ';
+                    if ($row['substanceUse'] === 'yes') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="substanceUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseNo" value="no" ';
+                    if ($row['substanceUse'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="substanceUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--8-->
                                         <div class="row">
                                             <!-- Question Label -->
@@ -349,7 +569,33 @@ class ServiceClass
                                                 </div>
                                             </div>
 
+                                            <!-- Are you taking birth control pills? -->
+                                            <div class="col-lg-6 mb-3">
+                                                <label class="form-label mb-0">Are you taking birth control
+                                                    pills?</label>
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlYes" value="yes" ';
+                    if ($row['birthControl'] === 'yes') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="birthControlYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlNo" value="no"';
+                    if ($row['birthControl'] === 'no') {
+                        echo 'checked';
+                    }
+                    echo '>
+                                                    <label class="form-check-label" for="birthControlNo">No</label>
+                                                </div>
+                                            </div>
                                         </div>
+
                                         <hr>
                                         <label class="form-label"><strong>Medical Conditions (Check all that
                                                 apply):</strong></label>
