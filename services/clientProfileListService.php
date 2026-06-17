@@ -62,14 +62,14 @@ class ServiceClass
                 echo '
                 <tr style="color: black;">
                 <td>' . ucwords(strtolower($fullname)) . '</td>
-                <td>' . ucwords(strtolower($row["nickname"])) . '</td>
+                <td>' . ucwords(strtolower($row["homeAddress"])) . '</td>
                 <td>' . $age . '</td>
                 <td>' . ucwords(strtolower($row["sex"])) . '</td>
         
                 <td>' . $row["mobileNumber"] . '</td>
                
                
-                <td>' . ucwords($row["hmo"]) . '</td>
+                <td>' . ucwords($row["emailAddress"]) . '</td>
      
                
                 <td align="center">
@@ -114,7 +114,7 @@ class ServiceClass
 
                 }
                 if ($_SESSION["account_type"] != 200) {
-                    echo ' <a href="addTreatmentHistory.php?company=' . $row["company"] . '&cardnumber=' . $row["cardnumber"] . '&hmo=' . $row["hmo"] . '&clientid=' . $row["clientid"] . '&birthDate=' . $row["birthDate"] . '&clientname=' . $fullname . '&age=' . $age . '&address=' . $row["homeAddress"] . '" class="btn btn-warning btn-circle" title="Add Treatment"><i class="fas fa-plus"></i></a>';
+                    echo ' <a href="addTreatmentHistory.php?company=' . $row["company"] . '&cardnumber=' . $row["cardnumber"] . '&hmo=' . $row["hmo"] . '&clientid=' . $row["clientid"] . '&birthDate=' . $row["birthDate"] . '&clientname=' . $fullname . '&age=' . $age . '&address=' . $row["homeAddress"] . '" class="btn btn-warning btn-circle" title="Add Treatment"target="_blank" rel="noopener noreferrer"><i class="fas fa-plus"></i></a>';
 
                 }
 

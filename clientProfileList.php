@@ -73,14 +73,14 @@ error_reporting(0);
                                         <tr>
 
                                             <th onclick="sortTable(this)">Name <span class="sort-icon"></span></th>
-                                            <th onclick="sortTable(this)">Nick Name <span class="sort-icon"></span>
+                                            <th onclick="sortTable(this)">Address <span class="sort-icon"></span>
                                             </th>
                                             <th onclick="sortTable(this)">Age <span class="sort-icon"></span></th>
                                             <th onclick="sortTable(this)">Gender <span class="sort-icon"></span>
                                             </th>
                                             <th onclick="sortTable(this)">Mobile Number <span class="sort-icon"></span>
                                             </th>
-                                            <th onclick="sortTable(this)">HMO <span class="sort-icon"></span></th>
+                                            <th onclick="sortTable(this)">Email Address <span class="sort-icon"></span></th>
                                             <th>Action</th>
                                             <!-- No onclick, since actions typically aren't sortable -->
 
