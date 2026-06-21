@@ -75,8 +75,9 @@ function updateDisbursements() {
         var checkbox = row.querySelector('.commission-checkbox');
         if (!checkbox) return;
         var amount = parseFloat(row.dataset.amount) || 0;
-        var disbursement = checkbox.checked ? amount * percent / 100 : amount;
-        row.querySelector('.disbursement-amount').innerText = disbursement.toFixed(2);
+        var commission = checkbox.checked ? amount * percent / 100 : 0;
+        var cell = row.querySelector('.commission-amount');
+        if (cell) cell.innerText = commission.toFixed(2);
     });
     recalculateTotal();
 }
@@ -86,8 +87,9 @@ function updateRowDisbursement(checkbox) {
     if (!row) return;
     var percent = parseFloat(document.getElementById('commissionPercentage').value) || 0;
     var amount = parseFloat(row.dataset.amount) || 0;
-    var disbursement = checkbox.checked ? amount * percent / 100 : amount;
-    row.querySelector('.disbursement-amount').innerText = disbursement.toFixed(2);
+    var commission = checkbox.checked ? amount * percent / 100 : 0;
+    var cell = row.querySelector('.commission-amount');
+    if (cell) cell.innerText = commission.toFixed(2);
 }
 
 function recalculateTotal() {
@@ -98,12 +100,21 @@ function recalculateTotal() {
     var total = 0;
     document.querySelectorAll('#responseBody table tbody tr').forEach(function (row) {
         var amount = parseFloat(row.dataset.amount) || 0;
-        var checked = row.querySelector('.commission-checkbox').checked;
-        var payout = checked ? amount * percent / 100 : amount;
+        var checkedEl = row.querySelector('.commission-checkbox');
+        var checked = checkedEl ? checkedEl.checked : false;
+        var payout = checked ? amount * percent / 100 : 0;
         total += payout;
     });
 
-    total = total + adjustments - deductions;
+    // compute basic salary from attendance and daily rate
+    var attendance = parseFloat(document.getElementById('attendanceCount') ? document.getElementById('attendanceCount').value : 0) || 0;
+    var dailyRate = parseFloat(document.getElementById('dailyRate') ? document.getElementById('dailyRate').value : 0) || 0;
+    var basicSalary = attendance * dailyRate;
+    // update basic salary display if present
+    var basicEl = document.getElementById('basicSalary');
+    if (basicEl) basicEl.innerText = basicSalary.toFixed(2);
+
+    total = total + basicSalary + adjustments - deductions;
     if (total < 0) {
         total = 0;
     }

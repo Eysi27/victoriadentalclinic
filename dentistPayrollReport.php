@@ -123,7 +123,7 @@ $today = date('Y-m-d');
                                         value="<?php echo $today; ?>" onchange="loadPayrollReport();">
                                     <input type="number" id="commissionPercentage"
                                         class="form-control form-control-sm mr-2 mb-2" placeholder="Commission %"
-                                        value="12" min="0" max="100" step="0.01" onchange="updateDisbursements();"
+                                        value="10" min="0" max="100" step="0.01" onchange="updateDisbursements();"
                                         oninput="updateDisbursements();">
                                     <button class="btn btn-primary btn-sm mr-2 mb-2"
                                         onclick="loadPayrollReport();">Load</button>
@@ -180,7 +180,23 @@ $today = date('Y-m-d');
                                         <div class="row align-items-end">
                                             <div class="col-md-8">
                                                 <div class="form-row">
-                                                    <div class="col-6 mb-3">
+                                                    <div class="col-3 mb-3">
+                                                        <label for="attendanceCount"
+                                                            class="small text-uppercase text-muted">Attendance</label>
+                                                        <input type="number" step="1" min="0" id="attendanceCount"
+                                                            class="form-control form-control-sm" value="0"
+                                                            onchange="recalculateTotal();"
+                                                            oninput="recalculateTotal();">
+                                                    </div>
+                                                    <div class="col-3 mb-3">
+                                                        <label for="dailyRate"
+                                                            class="small text-uppercase text-muted">Daily Rate</label>
+                                                        <input type="number" step="0.01" min="0" id="dailyRate"
+                                                            class="form-control form-control-sm" value="0.00"
+                                                            onchange="recalculateTotal();"
+                                                            oninput="recalculateTotal();">
+                                                    </div>
+                                                    <div class="col-3 mb-3">
                                                         <label for="adjustments"
                                                             class="small text-uppercase text-muted">Adjustments</label>
                                                         <input type="number" step="0.01" min="0" id="adjustments"
@@ -188,7 +204,7 @@ $today = date('Y-m-d');
                                                             onchange="recalculateTotal();"
                                                             oninput="recalculateTotal();">
                                                     </div>
-                                                    <div class="col-6 mb-3">
+                                                    <div class="col-3 mb-3">
                                                         <label for="deductions"
                                                             class="small text-uppercase text-muted">Deductions</label>
                                                         <input type="number" step="0.01" min="0" id="deductions"
@@ -199,6 +215,8 @@ $today = date('Y-m-d');
                                                 </div>
                                             </div>
                                             <div class="col-md-4 text-right">
+                                                <div class="small text-uppercase text-muted mb-1">Basic Salary</div>
+                                                <div class="h5 font-weight-bold" id="basicSalary">0.00</div>
                                                 <div class="small text-uppercase text-muted mb-1">Net Payable</div>
                                                 <div class="h4 font-weight-bold text-success" id="totalReceived">0.00
                                                 </div>

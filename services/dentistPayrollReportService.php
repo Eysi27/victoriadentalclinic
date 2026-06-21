@@ -77,7 +77,7 @@ class ServiceClass
         echo '<th>Payment Date</th>';
         echo '<th>Payment Type</th>';
         echo '<th>Payment Amount</th>';
-        echo '<th>Disbursement</th>';
+        echo '<th>Commission Amount</th>';
         echo '<th>Treatment</th>';
         echo '<th>Dentist</th>';
         echo '</tr></thead><tbody>';
@@ -91,7 +91,8 @@ class ServiceClass
             echo '<td>' . htmlspecialchars(date('Y/m/d', strtotime($row['paymentdate']))) . '</td>';
             echo '<td>' . htmlspecialchars($row['paymenttype']) . '</td>';
             echo '<td class="text-right">' . number_format($row['amount'], 2) . '</td>';
-            echo '<td class="text-right disbursement-amount">' . number_format($row['amount'], 2) . '</td>';
+            // commission amount starts at 0.00; only checked rows will get a commission value
+            echo '<td class="text-right commission-amount">0.00</td>';
             echo '<td>' . htmlspecialchars($row['treatment']) . '</td>';
             echo '<td>' . htmlspecialchars($row['dentist']) . '</td>';
             echo '</tr>';
