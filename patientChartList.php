@@ -569,6 +569,11 @@ error_reporting(0);
                                                 <option value="-">-- Select Remark --</option>
                                                 <option value="✔">✔- Present</option>
                                                 <option value="C">C - Caries</option>
+                                                <option value="C1">C1 - Caries</option>
+                                                <option value="C2">C2 - Caries</option>
+                                                <option value="C3">C3 - Caries</option>
+                                                <option value="C4">C4 - Caries</option>
+                                                <option value="C5">C5 - Caries</option>
                                                 <option value="X">X - Missing</option>
                                                 <option value="Ex">Ex - For Extraction</option>
                                                 <option value="IM">IM - Impacted Tooth</option>
