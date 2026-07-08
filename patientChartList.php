@@ -416,7 +416,7 @@ error_reporting(0);
                                         <img src="dentalcharts/tooth_1.png" alt="Tooth 48">
                                         <label>48</label>
                                     </div>
-                                    <div class="tooth" data-tooth="47">
+                                    <div class="tooth" data-tooth="47" value="47">
                                         <div class="remark-display"></div>
                                         <img src="dentalcharts/tooth_1.png" alt="Tooth 47">
                                         <label>47</label>
@@ -537,8 +537,12 @@ error_reporting(0);
                                         <h5 class="modal-title">Tooth Region</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
+                                   
+
+                                    
                                     <div
                                         class="modal-body d-flex flex-column align-items-center justify-content-center">
+                                    <h5 class="modal-title">Tooth: <span id="selected-tooth"></span></h5>
                                         <div class="mb-3">
                                             <label class="me-3"><input type="radio" name="penColor" value="red" checked>
                                                 Red</label>
@@ -635,7 +639,7 @@ error_reporting(0);
             <script src="controllers/patientChartListController-v3.js"></script>
             <!-- <script src="controllers/dentalchartController.js"></script> -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="controllers/dentalchartController-v8.js"></script>
+            <script src="controllers/dentalchartController-v9.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
 

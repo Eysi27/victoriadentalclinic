@@ -17,6 +17,9 @@ document.body.addEventListener('click', function (e) {
 
         document.getElementById('toothImage').src = e.target.src;
         clearSVGRegions();
+        // show selected tooth number beside the modal title
+        const sel = document.getElementById('selected-tooth');
+        if (sel) sel.textContent = ` ${currentTooth}`;
 
         const modal = new bootstrap.Modal(document.getElementById('drawingModal'));
         modal.show();
@@ -55,6 +58,9 @@ function saveRegion() {
         clonedImg.crossOrigin = "anonymous";
     }
     bootstrap.Modal.getInstance(document.getElementById('drawingModal')).hide();
+    // clear displayed tooth number after hiding modal
+    const selAfterSave = document.getElementById('selected-tooth');
+    if (selAfterSave) selAfterSave.textContent = '';
     // Allow rendering time especially on iOS
     setTimeout(() => {
         html2canvas(clone, {
@@ -106,6 +112,18 @@ function resetDrawingModal() {
     const svg = document.getElementById('svgOverlay');
     Array.from(svg.children).forEach(shape => {
         shape.setAttribute('fill', 'transparent');
+    });
+    // clear selected tooth display
+    const sel = document.getElementById('selected-tooth');
+    if (sel) sel.textContent = '';
+}
+
+// Clear selected tooth when modal is closed by any means
+const drawingModalEl = document.getElementById('drawingModal');
+if (drawingModalEl) {
+    drawingModalEl.addEventListener('hidden.bs.modal', () => {
+        const sel = document.getElementById('selected-tooth');
+        if (sel) sel.textContent = '';
     });
 }
 
