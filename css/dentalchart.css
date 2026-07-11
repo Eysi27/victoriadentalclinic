@@ -72,3 +72,17 @@
     flex-wrap: nowrap;
     overflow-x: auto;
 }
+
+.tooth-region-picker {
+    background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+    border: 1px solid #d7e5ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tooth-region-picker .badge {
+    min-width: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

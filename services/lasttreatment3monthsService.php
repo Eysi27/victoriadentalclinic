@@ -74,7 +74,7 @@ class ServiceClass
                                     <th>SOA ID</th>
                                     <th>SOA Date</th>
                                     <th>Total Fee</th>
-                                    <th>Days Since Treatment</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>';
@@ -111,10 +111,6 @@ class ServiceClass
                             $oldestDate = $lastDate;
                         }
 
-                        $asOfDate = new DateTime($asOf);
-                        $treatmentDate = new DateTime($lastDate);
-                        $daysSince = $treatmentDate->diff($asOfDate)->days;
-
                         $mobileDisplay = empty($row['mobileNumber']) ? '-' : htmlspecialchars($row['mobileNumber']);
 
                         echo '<tr style="color: black;">
@@ -127,7 +123,7 @@ class ServiceClass
                             <td>' . htmlspecialchars($row['soaid']) . '</td>
                             <td>' . date('Y/m/d', strtotime($lastDate)) . '</td>
                             <td style="text-align:right;">' . number_format($row['price'], 2) . '</td>
-                            <td style="text-align:right;">' . $daysSince . '</td>
+                            <td class="notify-status">Not yet notified</td>
                         </tr>';
                     }
                 }

@@ -64,7 +64,7 @@ class ServiceClass
         // Column 1: Tooth 18–11
         echo '<div class="tooth-column">';
         foreach (range(18, 11) as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/upper_tooth_1.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -84,7 +84,7 @@ class ServiceClass
         // Column 2: Tooth 21–28
         echo '<div class="tooth-column">';
         foreach (range(21, 28) as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/upper_tooth_2.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -111,7 +111,7 @@ class ServiceClass
         // Column 1: 55 to 51
         echo '<div class="tooth-column">';
         foreach (range(55, 51) as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/upper_tooth_1.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -131,7 +131,7 @@ class ServiceClass
         // Column 2: 61 to 65
         echo '<div class="tooth-column">';
         foreach (range(61, 65) as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/upper_tooth_2.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -166,7 +166,7 @@ class ServiceClass
         // Column 1: 85 to 81
         echo '<div class="tooth-column">';
         foreach ([85, 84, 83, 82, 81] as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/lower_tooth_1.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -186,7 +186,7 @@ class ServiceClass
         // Column 2: 71 to 75
         echo '<div class="tooth-column">';
         foreach ([71, 72, 73, 74, 75] as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/lower_tooth_2.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -209,7 +209,7 @@ class ServiceClass
         // Column 1: 48 to 41
         echo '<div class="tooth-column">';
         foreach ([48, 47, 46, 45, 44, 43, 42, 41] as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/lower_tooth_1.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {
@@ -229,7 +229,7 @@ class ServiceClass
         // Column 2: 31 to 38
         echo '<div class="tooth-column">';
         foreach ([31, 32, 33, 34, 35, 36, 37, 38] as $toothNumber) {
-            $imgSrc = 'dentalcharts/tooth_1.png';
+            $imgSrc = 'dentalcharts/lower_tooth_2.png';
             $remark = '-';
 
             if (isset($toothData[$toothNumber])) {

@@ -191,42 +191,42 @@ error_reporting(0);
                                 <div class="tooth-column">
                                     <div class="tooth" data-tooth="18">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 18">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 18">
                                         <label>18</label>
                                     </div>
                                     <div class="tooth" data-tooth="17">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 17">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 17">
                                         <label>17</label>
                                     </div>
                                     <div class="tooth" data-tooth="16">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 16">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 16">
                                         <label>16</label>
                                     </div>
                                     <div class="tooth" data-tooth="15">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 15">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 15">
                                         <label>15</label>
                                     </div>
                                     <div class="tooth" data-tooth="14">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 14">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 14">
                                         <label>14</label>
                                     </div>
                                     <div class="tooth" data-tooth="13">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 13">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 13">
                                         <label>13</label>
                                     </div>
                                     <div class="tooth" data-tooth="12">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 12">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 12">
                                         <label>12</label>
                                     </div>
                                     <div class="tooth" data-tooth="11">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 11">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 11">
                                         <label>11</label>
                                     </div>
                                 </div>
@@ -235,42 +235,42 @@ error_reporting(0);
                                 <div class="tooth-column">
                                     <div class="tooth" data-tooth="21">
                                         <div class="remark-display">✔</div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 21">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 21">
                                         <label>21</label>
                                     </div>
                                     <div class="tooth" data-tooth="22">
                                         <div class="remark-display">MD</div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 22">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 22">
                                         <label>22</label>
                                     </div>
                                     <div class="tooth" data-tooth="23">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 23">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 23">
                                         <label>23</label>
                                     </div>
                                     <div class="tooth" data-tooth="24">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 24">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 24">
                                         <label>24</label>
                                     </div>
                                     <div class="tooth" data-tooth="25">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 25">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 25">
                                         <label>25</label>
                                     </div>
                                     <div class="tooth" data-tooth="26">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 26">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 26">
                                         <label>26</label>
                                     </div>
                                     <div class="tooth" data-tooth="27">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 27">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 27">
                                         <label>27</label>
                                     </div>
                                     <div class="tooth" data-tooth="28">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 28">
+                                        <img src="dentalcharts/upper_tooth_2.png" alt="Tooth 28">
                                         <label>28</label>
                                     </div>
                                 </div>
@@ -282,17 +282,17 @@ error_reporting(0);
                                 <div class="tooth-column">
                                     <div class="tooth" data-tooth="55">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 55">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 55">
                                         <label>55</label>
                                     </div>
                                     <div class="tooth" data-tooth="54">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 54">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 54">
                                         <label>54</label>
                                     </div>
                                     <div class="tooth" data-tooth="53">
                                         <div class="remark-display"></div>
-                                        <img src="dentalcharts/tooth_1.png" alt="Tooth 53">
+                                        <img src="dentalcharts/upper_tooth_1.png" alt="Tooth 53">
                                         <label>53</label>
                                     </div>
                                     <div class="tooth" data-tooth="52">
@@ -534,15 +534,33 @@ error_reporting(0);
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Tooth Region</h5>
+                                        <h5 class="modal-title">Tooth Region:
+                                        </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
+
                                     <div
                                         class="modal-body d-flex flex-column align-items-center justify-content-center">
-                                        <div class="mb-3">
-                                            <label class="me-3"><input type="radio" name="penColor" value="red" checked>
-                                                Red</label>
-                                            <label><input type="radio" name="penColor" value="blue"> Blue</label>
+
+                                        <div
+                                            class="mb-3 tooth-region-picker d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2 p-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="fw-bold text-dark">Selected Tooth:</span>
+                                                <span id="selected-tooth-region"
+                                                    class="badge bg-primary rounded-pill px-3 py-2 fs-6">15</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <label
+                                                    class="d-flex align-items-center gap-2 mb-0 text-danger fw-semibold">
+                                                    <input type="radio" name="penColor" value="red" checked>
+                                                    Red
+                                                </label>
+                                                <label
+                                                    class="d-flex align-items-center gap-2 mb-0 text-primary fw-semibold">
+                                                    <input type="radio" name="penColor" value="blue">
+                                                    Blue
+                                                </label>
+                                            </div>
                                         </div>
 
                                         <div id="svg-wrapper"
@@ -630,7 +648,7 @@ error_reporting(0);
             <script src="controllers/patientChartListController-v3.js"></script>
             <!-- <script src="controllers/dentalchartController.js"></script> -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="controllers/dentalchartController-v8.js"></script>
+            <script src="controllers/dentalchartController-v9.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
 

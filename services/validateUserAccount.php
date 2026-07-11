@@ -94,6 +94,22 @@ class ServiceClass
 
 			}
 
+			$query4 = "select tag_value from configs where tag_key='sms-key'";
+			$stmt4 = $this->conn->prepare($query4);
+			//setting of parameter
+
+
+			//trigger
+			$stmt4->execute();
+			//for select query
+			if ($stmt4->rowCount() > 0) {
+
+				while ($row4 = $stmt4->fetch(PDO::FETCH_ASSOC)) {
+					$_SESSION['smskey'] = $row4["tag_value"];
+				}
+
+			}
+
 
 			return true;
 		} else {

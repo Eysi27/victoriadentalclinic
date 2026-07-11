@@ -60,7 +60,9 @@ error_reporting(0);
                                 <input type="button" class="btn btn-primary ml-2" onclick="printDiv('daterange')"
                                     value="Print">
                             </div>
-                            <h6 class="m-0 font-weight-bold">PATIENTS WITH LAST TREATMENT OVER 5 MONTHS</h6>
+                            <h6 class="m-0 font-weight-bold">PATIENTS WITH LAST TREATMENT OVER 5 MONTHS
+
+                            </h6>
 
                         </div>
 
@@ -126,7 +128,7 @@ error_reporting(0);
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
             <script src="js/custom-v2.js"></script>
-            <script src="controllers/lasttreatment3monthsController.js"></script>
+            <script src="controllers/lasttreatment3monthsController-v1.js"></script>
             <script src="controllers/divPrinterController-v1.js"></script>
 
             <!-- Notify confirmation modal -->

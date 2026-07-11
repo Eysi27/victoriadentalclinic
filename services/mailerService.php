@@ -1,10 +1,21 @@
 <?php
+session_start();
 
-$to = urldecode($_POST['to']);
-$subject = urldecode($_POST['subject']);
-$greetings = urldecode($_POST['greetings']);
-$msg = nl2br(urldecode($_POST['msg']));
-//INHERITANCE -- CREATING NEW INSTANCE OF A CLASS (INSTANTIATE)
+header('Content-Type: application/json');
+
+$to = trim(urldecode($_POST['to'] ?? ''));
+$subject = urldecode($_POST['subject'] ?? '');
+$greetings = urldecode($_POST['greetings'] ?? '');
+$msg = nl2br(urldecode($_POST['msg'] ?? ''));
+$mobileNumbersInput = trim(urldecode($_POST['mobileNumbers'] ?? ''));
+$mobileNumbers = array_values(array_filter(array_map(function ($value) {
+  return preg_replace('/[^0-9]/', '', trim((string) $value));
+}, array_filter(explode(',', $mobileNumbersInput), function ($value) {
+  return trim((string) $value) !== '';
+})), function ($value) {
+  return $value !== '';
+}));
+
 $service = new ServiceClass();
 
 $message = "
@@ -64,10 +75,33 @@ $message = "
 </html>
 ";
 
+$emailSent = false;
+$smsSent = false;
 
-$email = $service->sendEmail($to, $subject, $message);
+if ($to !== '') {
+  $emailSent = $service->sendEmail($to, $subject, $message);
+}
 
-//USE THIS AS YOUR BASIS
+if (!empty($mobileNumbers)) {
+  $smsSent = $service->sendSmsBatch($mobileNumbers);
+}
+
+$status = 'Skipped';
+if ($emailSent && $smsSent) {
+  $status = 'Notified [email,sms]';
+} elseif ($emailSent) {
+  $status = 'Notified [email]';
+} elseif ($smsSent) {
+  $status = 'Notified [sms]';
+}
+
+echo json_encode([
+  'success' => ($emailSent || $smsSent),
+  'email' => $emailSent,
+  'sms' => $smsSent,
+  'status' => $status
+]);
+
 class ServiceClass
 {
 
@@ -78,13 +112,61 @@ class ServiceClass
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= 'From: <noreply@victoria-advanced-dentalcare.com>' . "\r\n";
-    mail($to, $subject, $msg, $headers);
+
+    return mail($to, $subject, $msg, $headers);
   }
-  //UNTIL THIS CODE
 
+  public function sendSmsBatch($numbers)
+  {
+    if (empty($_SESSION['smskey'])) {
+      $this->writeSmsLog('SMS skipped: missing smskey');
+      return false;
+    }
+
+    if (empty($numbers)) {
+      return false;
+    }
+
+    $message = 'Hi! It’s been 6 months since your dental cleaning. Book now at Victoria Advanced Dental Care (FB) or text 0968 350 7067. See you soon!';
+    $batchSize = 100;
+    $success = false;
+
+    for ($i = 0; $i < count($numbers); $i += $batchSize) {
+      $batch = array_slice($numbers, $i, $batchSize);
+      $params = [
+        'apikey' => $_SESSION['smskey'],
+        'number' => implode(',', $batch),
+        'message' => $message
+      ];
+
+      $ch = curl_init('https://api.semaphore.co/api/v4/messages');
+      curl_setopt($ch, CURLOPT_POST, true);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+
+      $response = curl_exec($ch);
+      $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+      curl_close($ch);
+
+      $batchSuccess = $httpCode >= 200 && $httpCode < 300;
+      $this->writeSmsLog('batch=' . count($batch) . ' http=' . $httpCode . ' success=' . ($batchSuccess ? 'true' : 'false') . ' response=' . (string) $response);
+      $success = $success || $batchSuccess;
+    }
+
+    return $success;
+  }
+
+  private function writeSmsLog($message)
+  {
+    $logDir = dirname(__FILE__) . '/logs';
+    if (!is_dir($logDir)) {
+      mkdir($logDir, 0755, true);
+    }
+
+    $logFile = $logDir . '/sms_notifications.log';
+    $entry = date('Y-m-d H:i:s') . ' ' . $message . PHP_EOL;
+    file_put_contents($logFile, $entry, FILE_APPEND);
+  }
 }
-//UNTIL HERE COPY
-
-
-
 ?>

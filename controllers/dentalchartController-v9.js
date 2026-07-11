@@ -13,6 +13,7 @@ document.body.addEventListener('click', function (e) {
         currentTooth = toothElement.dataset.tooth;
         currentClientId = toothElement.dataset.clientid;
         currentRemarks = toothElement.dataset.remarks;
+        document.getElementById("selected-tooth-region").textContent = currentTooth;
         document.getElementById("remarkSelect").value = currentRemarks;
 
         document.getElementById('toothImage').src = e.target.src;
@@ -54,6 +55,7 @@ function saveRegion() {
     if (clonedImg) {
         clonedImg.crossOrigin = "anonymous";
     }
+    alert("Saving region for tooth: " + currentTooth + " with remarks: " + remarks);
     bootstrap.Modal.getInstance(document.getElementById('drawingModal')).hide();
     // Allow rendering time especially on iOS
     setTimeout(() => {
@@ -87,6 +89,7 @@ function saveRegion() {
                 });
         });
     }, 300); // slight delay to ensure rendering
+    alert("Saving region for tooth: " + currentTooth + " with remarks: " + remarks);
 }
 
 
@@ -100,7 +103,17 @@ function resetDrawingModal() {
 
     // Reset tooth image to default
     const toothImage = document.getElementById('toothImage');
-    toothImage.src = "dentalcharts/tooth_1.png";
+
+    if (currentTooth >= 11 && currentTooth <= 18 || currentTooth >= 51 && currentTooth <= 55) {
+        toothImage.src = "dentalcharts/upper_tooth_1.png";
+    } else if (currentTooth >= 21 && currentTooth <= 28 || currentTooth >= 61 && currentTooth <= 65) {
+        toothImage.src = "dentalcharts/upper_tooth_2.png";
+    } else if (currentTooth >= 31 && currentTooth <= 38 || currentTooth >= 71 && currentTooth <= 75) {
+        toothImage.src = "dentalcharts/lower_tooth_2.png";
+    } else if (currentTooth >= 41 && currentTooth <= 48 || currentTooth >= 81 && currentTooth <= 85) {
+        toothImage.src = "dentalcharts/lower_tooth_1.png";
+    }
+
 
     // Clear SVG (if any marks were added via JS drawing)
     const svg = document.getElementById('svgOverlay');
