@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+include_once('bars/properties.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +29,41 @@ error_reporting(0);
     <link href="css/sortable.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
+
+    <style>
+        #printable-area {
+            width: 4.25in !important;
+            height: auto !important;
+            overflow: visible !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            position: relative;
+            font-size: 11pt;
+            font-family: serif;
+            line-height: 1.2;
+        }
+
+        #printable-area .modal-body {
+            padding: 0.3in !important;
+            height: auto !important;
+            overflow: hidden !important;
+            width: 4.25in;
+            max-height: 5.5in;
+        }
+
+        #printable-area .modal-footer {
+            padding: 0.3in !important;
+            border-top: 1px solid #dee2e6;
+        }
+
+        @media print {
+            #printable-area {
+                width: 4.25in !important;
+                height: 5.5in !important;
+                page-break-after: avoid;
+            }
+        }
+    </style>
 
 </head>
 
@@ -115,8 +151,8 @@ error_reporting(0);
                     </div>
 
                     <div class="modal fade" id="printPrescriptionModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content p-3" id="printable-area">
+                        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: fit-content;">
+                            <div class="modal-content" id="printable-area">
                                 <div class="modal-body">
 
 
@@ -182,7 +218,7 @@ error_reporting(0);
                                             style="border-bottom: 1px solid black; width: 200px; margin-left: auto; margin-bottom: 5px;">
                                         </div>
 
-                                        <strong id="print-dentist">Nikki Ferrer Sarmiento, DDM</strong><br>
+                                        <strong id="print-dentist">Dr. Caryl </strong><br>
                                         License No.: <span id="print-license">0053036</span><br>
                                         PTR No.: _______________
                                     </div>
@@ -221,17 +257,30 @@ error_reporting(0);
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label>Dentist Name: </label>
-                                                <input type="text" class="form-control" name="dentistname"
-                                                    id="modal-dentist">
+                                                <select class="form-control" name="dentistname" id="modal-dentist">
+                                                    <?php foreach ($dentist as $doc) { ?>
+                                                        <option value="<?php echo htmlspecialchars($doc); ?>"
+                                                            <?php echo ($doc === 'Dr. Caryl Catangui Torres') ? 'selected' : ''; ?>>
+                                                            <?php echo htmlspecialchars($doc); ?>
+                                                        </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label>License No.: </label>
                                                 <input type="text" class="form-control" name="dentistname"
                                                     id="modal-license">
                                             </div>
-                                            <div class="form-group col-md-6">
+                                            <!-- <div class="form-group col-md-6">
                                                 <label>Patient Name</label>
                                                 <input type="text" class="form-control" name="name" id="modal-name">
+                                            </div> -->
+                                               <div class="form-group col-md-6">
+                                                <label>Patient Name</label>
+                                                 <select class="form-control" name="name" id="modal-name" onchange="getProfileDetails(this.value)">
+                                                    <option value="1">profile1</option>
+                                                    <option value="2">profile2</option>
+                                                </select>
                                             </div>
 
                                             <div class="form-group col-md-6">

@@ -5,8 +5,8 @@ $sidebarColor = "bg-gold";
 $superuser = "admin-carryl";
 $dentist = [
     "Dr. Caryl Catangui Torres",
-    "Doc Jao Briones",
-    "Doc Vem Bernardo"
+    "Dr. Jao Briones",
+    "Dr. Vem Bernardo"
 ];
 
 ?>
