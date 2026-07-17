@@ -73,6 +73,12 @@ if ($_SESSION["account_type"] == 0) {
         <span>Client Appointments</span>
     </a>
 
+       <li class="nav-item">
+    <a class="nav-link" href="calendar.php" >
+        <i class="fas fa-calendar"></i>
+        <span>Clinic Calendar</span>
+    </a>
+
         
    
     
