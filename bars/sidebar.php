@@ -200,6 +200,18 @@ if ($_SESSION["account_type"] == 0) {
         <i class="fas fa-shopping-cart"></i>
         <span>Expenses</span>
     </a>
+     <li class="nav-item">
+    <a class="nav-link" href="pendingAppointmentList.php" >
+        <i class="fas fa-calendar-check"></i>
+        <span>Client Appointments</span>
+    </a>
+
+       <li class="nav-item">
+    <a class="nav-link" href="calendar.php" >
+        <i class="fas fa-calendar"></i>
+        <span>Clinic Calendar</span>
+    </a>
+    </li>
    
     
             ';
@@ -303,6 +315,19 @@ if ($_SESSION["account_type"] == 0) {
         <span>Dental Certificate</span>
     </a>
    
+    </li>
+
+     <li class="nav-item">
+    <a class="nav-link" href="pendingAppointmentList.php" >
+        <i class="fas fa-calendar-check"></i>
+        <span>Client Appointments</span>
+    </a>
+
+       <li class="nav-item">
+    <a class="nav-link" href="calendar.php" >
+        <i class="fas fa-calendar"></i>
+        <span>Clinic Calendar</span>
+    </a>
     </li>
             ';
 
