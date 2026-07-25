@@ -24,7 +24,7 @@ error_reporting(0);
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico" />
 </head>
 
 <body id="page-top">
@@ -133,19 +133,30 @@ error_reporting(0);
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
 
                                     <label for="treatment">Treatment</label>
                                     <input list="treatment-options" id="treatment" name="treatment"
-                                        class="form-control" />
+                                        onchange="populateReferenceSOA()" class="form-control" />
 
                                     <datalist id="treatment-options">
 
                                         <!-- Add more options as needed -->
                                     </datalist>
                                     <!-- <select id="treatment" name="treatment" class="form-control">
-
+                                    
                                     </select> -->
+                                    <div id="reference-soa-id" style="display:none;">
+                                        <label for="treatment">Reference SOAID</label>
+                                        <input list="reference-soa-options" id="reference-soa" name="reference-soa"
+                                            class="form-control" />
+
+                                        <datalist id="reference-soa-options">
+                                            <option>No Reference SOA ID Available</option>
+                                            <!-- Add more options as needed -->
+                                        </datalist>
+
+                                    </div>
                                     <label for="diagnosis">Diagnosis</label>
                                     <textarea id="diagnosis" class="form-control" name="diagnosis"
                                         placeholder="Diagnosis"></textarea>
@@ -169,7 +180,7 @@ error_reporting(0);
                                     <button class="btn btn-primary form-control" onclick="add()">Add</button>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-7">
                                     <table class="table text-dark" width="100%" cellspacing="0" style="font-size:12px;">
                                         <thead>
                                             <tr>
@@ -179,6 +190,7 @@ error_reporting(0);
                                                 <th>Remarks</th>
                                                 <th>Price</th>
                                                 <th>HMO</th>
+                                                <th>Ref</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -239,7 +251,7 @@ error_reporting(0);
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/eSoaController-v3.js"></script>
+            <script src="controllers/eSoaController-v4.js"></script>
             <script src="controllers/divPrinterController-v1.js"></script>
             <script src="js/custom-v2.js"></script>
 </body>

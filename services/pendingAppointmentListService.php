@@ -5,7 +5,7 @@ $result = $service->loadClientProfile();
 
 class ServiceClass
 {
-	
+
 	private $conn;
 	public function __construct()
 	{
@@ -20,43 +20,44 @@ class ServiceClass
 		return $stmt;
 	}
 	//DO NOT INCLUDE THIS CODE
-    public function loadClientProfile(){
-       
+	public function loadClientProfile()
+	{
 
 
-        $query = "select * from bookappointmentinfo";
+
+		$query = "select * from bookappointmentinfo";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		if ($stmt->rowCount() > 0) {
 			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $fullname =$row["lName"].', '.$row["fName"].' '.$row["mName"];
-                echo'
+				$fullname = $row["lName"] . ', ' . $row["fName"] . ' ' . $row["mName"];
+				echo '
 <tr>
-                <td>'.$row["clientid"].'</td>
-				<td>'.$row["datebooked"].'</td>
-                <td>'.$fullname.'</td>
-                <td>'.$row["Mobile"].'</td>
-                <td>'.$row["Email"].'</td>
-				<td>'.$row["Status"].' '.$row["dateassigned"].'</td>
-                
+                <td>' . $row["clientid"] . '</td>
+				<td>' . $row["datebooked"] . '</td>
+                <td>' . $fullname . '</td>
+                <td>' . $row["Mobile"] . '</td>
+                <td>' . $row["Email"] . '</td>
+				<td>' . $row["Status"] . ' ' . $row["dateassigned"] . '</td>
+                <td>' . $row["dentist"] . '</td>
                
                 <td>';
-				if($row["Status"]=="Pending"){
-				echo'
+				if ($row["Status"] == "Pending") {
+					echo '
 				
-				<a href="#" onclick="approve(\''.$row["clientid"].'\');"   class="btn btn-primary ">Approve</a>
-				<a href="#" onclick="decline(\''.$row["clientid"].'\');"   class="btn btn-danger ">Decline</a>
+				<a href="#" onclick="approve(\'' . $row["clientid"] . '\');"   class="btn btn-primary ">Approve</a>
+				<a href="#" onclick="decline(\'' . $row["clientid"] . '\');"   class="btn btn-danger ">Decline</a>
 
-				'; 
-			}else{
-				echo'Processed';
+				';
+				} else {
+					echo 'Processed';
 				}
 				echo '</td>';
-              
-            }
-       
+
+			}
+
 		} else {
-			echo'
+			echo '
 <tr>
 <td>-</td>
                 <td>-</td>
@@ -73,11 +74,11 @@ class ServiceClass
 ';
 
 		}
-    }
+	}
 
 }
 
-	
+
 
 
 

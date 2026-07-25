@@ -11,9 +11,10 @@ $price = urldecode($_POST['price']);
 $clientid = urldecode($_POST['clientid']);
 $esoaid = urldecode($_POST['soaid']);
 $hmo = urldecode($_POST['hmo']);
+$ref = urldecode($_POST['ref']);
 
 $service = new ServiceClass();
-$result = $service->submitEsoaSub($treatment, $diagnosis, $details, $remarks, $price, $clientid, $esoaid, $hmo);
+$result = $service->submitEsoaSub($treatment, $diagnosis, $details, $remarks, $price, $clientid, $esoaid, $hmo, $ref);
 echo $result;
 //USE THIS AS YOUR BASIS
 class ServiceClass
@@ -32,7 +33,7 @@ class ServiceClass
 		$stmt = $this->conn->prepare($sql);
 		return $stmt;
 	}
-	public function submitEsoaSub($treatment, $diagnosis, $details, $remarks, $price, $clientid, $esoaid, $hmo)
+	public function submitEsoaSub($treatment, $diagnosis, $details, $remarks, $price, $clientid, $esoaid, $hmo, $ref)
 	{
 		try {
 			$query = "Insert into treatmentsub(treatment,remarks,details,price,clientid,soaid,diagnosis,hmo) values (:a,:b,:c,:d,:e,:f,:g,:h)";
@@ -47,6 +48,16 @@ class ServiceClass
 			$stmt->bindParam(':g', $diagnosis);
 			$stmt->bindParam(':h', $hmo);
 			$stmt->execute();
+
+			if ($ref != '') {
+
+				$query2 = "update treatmentsub set price= (price-:a) where tsubid = :ref";
+				$stmt2 = $this->conn->prepare($query2);
+				$stmt2->bindParam(':a', $price);
+				$stmt2->bindParam(':ref', $ref);
+				$stmt2->execute();
+
+			}
 			return "success";
 		} catch (Exception $e) {
 			return "Error:" . $e->getMessage();

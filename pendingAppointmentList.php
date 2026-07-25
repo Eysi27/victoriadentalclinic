@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@ error_reporting(0);
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico" />
 
 </head>
 
@@ -64,6 +65,7 @@ error_reporting(0);
                                                 <th>Mobile</th>
                                                 <th>Email</th>
                                                 <th>Status</th>
+                                                <th>Dentist</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -75,6 +77,7 @@ error_reporting(0);
                                                 <th>Mobile</th>
                                                 <th>Email</th>
                                                 <th>Status</th>
+                                                <th>Dentist</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
@@ -103,6 +106,42 @@ error_reporting(0);
             <!-- End of Main Content -->
 
             <?php include_once('bars/footer.php'); ?>
+
+            <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="approveModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="approveModalLabel">Approve Appointment</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="approveClientId">
+                            <div class="form-group">
+                                <label for="approveDateAssigned">Date Assigned</label>
+                                <input type="datetime-local" class="form-control" id="approveDateAssigned" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="approveDentist">Dentist</label>
+                                <select class="form-control" id="approveDentist" required>
+                                    <option value="">Select dentist</option>
+                                    <?php foreach ($dentist as $d) { ?>
+                                        <option value="<?php echo htmlspecialchars($d, ENT_QUOTES); ?>">
+                                            <?php echo htmlspecialchars($d, ENT_QUOTES); ?>
+                                        </option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="approveSubmitBtn">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Bootstrap core JavaScript-->
             <script src="vendor/jquery/jquery.min.js"></script>

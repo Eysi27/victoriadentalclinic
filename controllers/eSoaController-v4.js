@@ -14,6 +14,32 @@ function loadTreatment() {
 
 }
 
+function populateReferenceSOA() {
+    var treatment = document.getElementById("treatment").value;
+    if (treatment == "Orthodontic Treatment - Adjustment") {
+        var fd = new FormData();
+        document.getElementById("reference-soa-id").style.display = "block";
+        var clientid = document.getElementById("clientid").value;
+        fd.append('clientid', clientid);
+        $.ajax({
+            url: "services/populateReferenceSoaId.php",
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (result) {
+                document.getElementById("reference-soa-options").innerHTML = result;
+            }
+        });
+
+
+    } else {
+        document.getElementById("reference-soa-id").style.display = "none";
+        document.getElementById("reference-soa").value = "";
+    }
+
+}
+
 function add() {
     var e = document.getElementById("treatment");
     var treatment = e.value;
@@ -23,6 +49,7 @@ function add() {
     var price = document.getElementById("price").value || 0;
     var hmo = "";
     var isHmo = document.getElementById("hmoCovered").checked;
+    var referenceSoaId = document.getElementById("reference-soa").value;
 
     if (isHmo) {
         hmo = document.getElementById("hmo").value;
@@ -40,6 +67,7 @@ function add() {
             <td>${remarksForDisplay}</td>
             <td>${price}</td>
             <td>${hmo}</td>
+            <td>${referenceSoaId}</td>
             <td>
                 <button class="btn btn-success btn-circle btn-sm"
                     onclick="editTreatment(this)"
@@ -49,6 +77,7 @@ function add() {
                     data-remarks="${encodeURIComponent(remarks)}"
                     data-hmo="${encodeURIComponent(hmo)}"
                     data-price="${encodeURIComponent(price)}"
+                    data-reference-soa-id="${encodeURIComponent(referenceSoaId)}"
                     title="Edit treatment">
                     <i class="fas fa-edit"></i>
                 </button>
@@ -67,6 +96,10 @@ function add() {
     document.getElementById("details").value = "";
     document.getElementById("diagnosis").value = "";
     document.getElementById("price").value = 0;
+    document.getElementById("hmoCovered").checked = false;
+    document.getElementById("reference-soa").value = "";
+    document.getElementById("reference-soa-id").style.display = "none";
+    document.getElementById("treatment").value = "";
 }
 
 
@@ -77,6 +110,7 @@ function editTreatment(button) {
     var remarks = decodeURIComponent(button.getAttribute("data-remarks"));
     var price = decodeURIComponent(button.getAttribute("data-price"));
     var hmo = decodeURIComponent(button.getAttribute("data-hmo"));
+    var referenceSoaId = decodeURIComponent(button.getAttribute("data-reference-soa-id"));
 
     if (hmo != "") {
         document.getElementById("hmoCovered").checked = true;
@@ -91,6 +125,8 @@ function editTreatment(button) {
     document.getElementById("details").value = details;
     document.getElementById("diagnosis").value = diagnosis;
     document.getElementById("price").value = price;
+
+    document.getElementById("reference-soa").value = referenceSoaId;
 
     $(button).closest('tr').remove();
 
@@ -133,7 +169,7 @@ function computeTotal() {
 
         }
     }
-    document.getElementById("treatmentList").innerHTML += "<td colspan=\"4\">Total</td><td>" + total + "</td><td></td></tr>";
+    document.getElementById("treatmentList").innerHTML += "<td colspan=\"4\">Total</td><td>" + total + "</td><td></td><td></td></tr>";
 
 
 }
@@ -157,7 +193,7 @@ function recomputeTotal() {
 
         }
     }
-    document.getElementById("treatmentList").innerHTML += "<td colspan=\"4\">Total</td><td>" + total + "</td><td></td></tr>";
+    document.getElementById("treatmentList").innerHTML += "<td colspan=\"4\">Total</td><td>" + total + "</td><td></td><td></td></tr>";
 
 
 }
@@ -296,9 +332,10 @@ function submitSubSoa(soaid) {
             var remarks = row.cells[3].innerHTML;
             var price = parseFloat(row.cells[4].innerHTML);
             var hmo = row.cells[5].innerHTML;
+            var ref = row.cells[6].innerHTML;
 
             if (treatment) {
-                submitSubSoatoService(treatment, diagnosis, details, remarks, price, clientid, soaid, hmo);
+                submitSubSoatoService(treatment, diagnosis, details, remarks, price, clientid, soaid, hmo, ref);
             }
 
 
@@ -312,7 +349,7 @@ function submitSubSoa(soaid) {
 
 }
 
-function submitSubSoatoService(treatment, diagnosis, details, remarks, price, clientid, soaid, hmo) {
+function submitSubSoatoService(treatment, diagnosis, details, remarks, price, clientid, soaid, hmo, ref) {
 
 
     var fd = new FormData();
@@ -324,6 +361,7 @@ function submitSubSoatoService(treatment, diagnosis, details, remarks, price, cl
     fd.append('clientid', clientid);
     fd.append('soaid', soaid);
     fd.append('hmo', hmo);
+    fd.append('ref', ref);
     $.ajax({
         url: "services/esoaSubmitSubService.php",
         data: fd,

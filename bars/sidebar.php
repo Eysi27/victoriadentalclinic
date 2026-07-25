@@ -382,6 +382,7 @@ if ($_SESSION["account_type"] == 0) {
     <div id="report" class="collapse" aria-labelledby="report" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
 <a class="collapse-item" href="clientTreatmentReport.php">Patient Treatments</a>
+<a class="collapse-item" href="lasttreatment3months.php">Last Treatment > 5 Months</a>
         </div>
     </div>
 </li>
