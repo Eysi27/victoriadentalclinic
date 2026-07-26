@@ -38,12 +38,12 @@ class ServiceClass
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo ' 
                     
-                                     <div style="width: 50%; display: flex; margin: 10px 30px;"><strong>Dental History</strong></div>
+                                     <div style="width: 50%; display: none; margin: 10px 30px;"><strong>Dental History</strong></div>
                                        ';
                     echo '
 
 <!-- Previous Dentist and Last Dental Visit -->
-<div style="display: flex; margin: 10px 30px;">
+<div style="display: none; margin: 10px 30px;">
     <div style="width: 50%; display: flex; align-items: center;">
         Previous Dentist:&nbsp;<strong>' . (!empty($row["prevDentist"]) && $row["prevDentist"] !== "null" ? htmlspecialchars($row["prevDentist"]) : "<em>Not specified</em>") . '</strong>
     </div>
