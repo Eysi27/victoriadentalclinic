@@ -146,7 +146,7 @@ $today = date('Y-m-d');
                                     </div>
                                     <div class="text-md-right mt-3 mt-md-0">
                                         <div class="small text-uppercase text-muted">Generated</div>
-                                        <div class="font-weight-bold"><?php echo date('Y-m-d'); ?></div>
+                                        <div class="font-weight-bold"><?php echo date('Y-m-d h:i A'); ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -217,6 +217,8 @@ $today = date('Y-m-d');
                                             <div class="col-md-4 text-right">
                                                 <div class="small text-uppercase text-muted mb-1">Basic Salary</div>
                                                 <div class="h5 font-weight-bold" id="basicSalary">0.00</div>
+                                                <div class="small text-uppercase text-muted mb-1">Total Commision</div>
+                                                <div class="h5 font-weight-bold" id="totalComission">0.00</div>
                                                 <div class="small text-uppercase text-muted mb-1">Net Payable</div>
                                                 <div class="h4 font-weight-bold text-success" id="totalReceived">0.00
                                                 </div>
@@ -239,9 +241,9 @@ $today = date('Y-m-d');
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/dentistPayrollReportController.js"></script>
-            <script src="controllers/divPrinterController-v1.js"></script>
-            <script src="controllers/divPrinterController-v2.js"></script>
+            <script src="controllers/dentistPayrollReportController-v2.js"></script>
+            <!-- <script src="controllers/divPrinterController-v1.js"></script> -->
+            <script src="controllers/divPrinterController-v3.js"></script>
         </div>
     </div>
 </body>

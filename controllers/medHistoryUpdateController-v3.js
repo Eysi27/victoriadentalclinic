@@ -119,6 +119,7 @@ function getMedicalFormValues() {
         officeNumber: document.getElementById("officeNumber").value.trim() || null,
         treatmentCondition: document.getElementById("treatmentCondition").value.trim() || null,
         goodHealth: document.querySelector('input[name="goodHealth"]:checked')?.value || null,
+        goodhealthCondition: document.getElementById("goodhealthCondition").value.trim() || null,
         underTreatment: document.querySelector('input[name="underTreatment"]:checked')?.value || null,
         treatmentCondition: document.getElementById("treatmentCondition").value.trim() || null,
 

@@ -52,6 +52,7 @@ class ServiceClass
                                             </div>
 
                                         </div>
+                                        <div style="display:none;">
                                         <hr>
                                         <h6 class="mb-3 text-center">Medical History</h6>
                                         <div class="row">
@@ -84,6 +85,7 @@ class ServiceClass
                                             </div>
 
                                         </div>
+                                        </div>
                                         <hr>
                                         <div class="row">
                                             <div class="col-lg-6 mb-3">
@@ -98,7 +100,7 @@ class ServiceClass
                                                         id="goodHealthYes" value="yes" ';
                     if ($row['goodHealth'] === 'yes')
                         echo 'checked';
-                    echo '>
+                    echo ' onclick="toggleCondition(true,\'goodhealthCondition\')">
                                                     <label class="form-check-label" for="goodHealthYes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -106,10 +108,30 @@ class ServiceClass
                                                         id="goodHealthNo" value="no"';
                     if ($row['goodHealth'] === 'no')
                         echo 'checked';
-                    echo '>
+                    echo ' onclick="toggleCondition(false,\'goodhealthCondition\')">
                                                     <label class="form-check-label" for="goodHealthNo">No</label>
                                                 </div>
                                             </div>
+                                            ';
+                    if ($row['goodHealth'] === 'no') {
+                        echo '
+      <div class="col-lg-12 mb-3">
+                                                <label for="goodhealthCondition" class="form-label">-If not, please
+                                                    specify?</label>
+                                                <input type="text" id="goodhealthCondition" name="goodhealthCondition"
+                                                    class="form-control" placeholder="Please specify" disabled>
+                                            </div>
+    ';
+                    } else {
+                        echo '  <div class="col-lg-12 mb-3">
+                                                <label for="goodhealthCondition" class="form-label">-If not, please
+                                                    specify?</label>
+                                                <input type="text" id="goodhealthCondition" name="goodhealthCondition"
+                                                    class="form-control" placeholder="Please specify" value="' . $row['goodhealthCondition'] . '">
+                                            </div>
+                                            ';
+                    }
+                    echo '
                                         </div>
                                         <div class="row">
                                             <!-- Question Label -->
@@ -169,7 +191,7 @@ class ServiceClass
                                         <div class="row">
                                             <!-- Question Label -->
                                             <div class="col-lg-6 mb-3">
-                                                <label class="form-label mb-0">8. Are you allergic to any of the
+                                                <label class="form-label mb-0">3. Are you allergic to any of the
                                                     following:</label>
                                             </div>
 
@@ -296,7 +318,7 @@ class ServiceClass
                                         <!--9-->
                                         <div class="row">
                                             <div class="col-lg-12 mb-2">
-                                                <label class="form-label fw-bold">9. For women only:</label>
+                                                <label class="form-label fw-bold">4. For women only:</label>
                                             </div>
 
                                             <!-- Are you pregnant? -->
@@ -350,6 +372,7 @@ class ServiceClass
                                             </div>
 
                                         </div>
+                                        <div style="display:none;">
                                         <hr>
                                         <label class="form-label"><strong>Medical Conditions (Check all that
                                                 apply):</strong></label>
@@ -537,7 +560,7 @@ class ServiceClass
                                             </div>
                                         </div>
 
-
+</div>
                                         <hr>
 
 

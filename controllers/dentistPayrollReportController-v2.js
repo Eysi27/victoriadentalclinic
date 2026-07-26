@@ -98,12 +98,15 @@ function recalculateTotal() {
     var deductions = parseFloat(document.getElementById('deductions').value) || 0;
 
     var total = 0;
+    var commision = 0;
     document.querySelectorAll('#responseBody table tbody tr').forEach(function (row) {
         var amount = parseFloat(row.dataset.amount) || 0;
         var checkedEl = row.querySelector('.commission-checkbox');
         var checked = checkedEl ? checkedEl.checked : false;
         var payout = checked ? amount * percent / 100 : 0;
         total += payout;
+        commision += payout;
+
     });
 
     // compute basic salary from attendance and daily rate
@@ -113,6 +116,9 @@ function recalculateTotal() {
     // update basic salary display if present
     var basicEl = document.getElementById('basicSalary');
     if (basicEl) basicEl.innerText = basicSalary.toFixed(2);
+
+    var comissionEl = document.getElementById('totalComission');
+    if (comissionEl) comissionEl.innerText = commision.toFixed(2);
 
     total = total + basicSalary + adjustments - deductions;
     if (total < 0) {

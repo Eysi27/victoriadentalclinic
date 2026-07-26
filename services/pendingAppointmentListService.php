@@ -40,6 +40,7 @@ class ServiceClass
                 <td>' . $row["Email"] . '</td>
 				<td>' . $row["Status"] . ' ' . $row["dateassigned"] . '</td>
                 <td>' . $row["dentist"] . '</td>
+				<td>' . $row["treatment"] . '</td>
                
                 <td>';
 				if ($row["Status"] == "Pending") {

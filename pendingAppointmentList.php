@@ -66,6 +66,7 @@ error_reporting(0);
                                                 <th>Email</th>
                                                 <th>Status</th>
                                                 <th>Dentist</th>
+                                                <th>Treatment</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -78,6 +79,7 @@ error_reporting(0);
                                                 <th>Email</th>
                                                 <th>Status</th>
                                                 <th>Dentist</th>
+                                                <th>Treatment</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
@@ -133,6 +135,17 @@ error_reporting(0);
                                         </option>
                                     <?php } ?>
                                 </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="treatment">Treatment</label>
+                                <input list="treatment-options" id="treatment" name="treatment"
+                                    onchange="populateReferenceSOA()" class="form-control" />
+
+                                <datalist id="treatment-options">
+
+                                    <!-- Add more options as needed -->
+                                </datalist>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -161,7 +174,7 @@ error_reporting(0);
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/getPendingAppointmentList.js"></script>
+            <script src="controllers/getPendingAppointmentList-v1.js"></script>
 
 
 

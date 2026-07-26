@@ -30,7 +30,7 @@ error_reporting(0);
 
     <!-- CSS for full calender -->
     <link href="css/calendar.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="img/vadc_icon.ico"/>  
+    <link rel="icon" type="image/png" href="img/vadc_icon.ico" />
 
 </head>
 
@@ -88,14 +88,43 @@ error_reporting(0);
                                 <div class="img-container">
                                     <div class="row">
                                         <div class="col-sm-12">
+
                                             <div class="form-group">
-                                                <label for="event_name">Event name</label>
+                                                <label>Event Name Type</label><br>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="eventType"
+                                                        id="defaultEvent" value="default" checked>
+                                                    <label class="form-check-label" for="defaultEvent">Default</label>
+                                                </div>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="eventType"
+                                                        id="customEvent" value="custom">
+                                                    <label class="form-check-label" for="customEvent">Custom</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Default Select -->
+                                            <div class="form-group" id="defaultEventContainer">
+                                                <label for="event_name">Event Name</label>
                                                 <select id="event_name" class="form-control">
                                                     <option value="Closed">Closed</option>
                                                     <option value="Fully Booked">Fully Booked</option>
                                                     <option value="Holiday-Closed">Holiday-Closed</option>
                                                 </select>
                                             </div>
+
+                                            <!-- Custom Textarea -->
+                                            <div class="form-group" id="customEventContainer" style="display:none;">
+                                                <label for="custom_event_name">Custom Event Name</label>
+                                                <textarea id="custom_event_name" class="form-control" rows="6">Patient:
+Contact:
+Procedure:
+Dentist:
+Time:</textarea>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="row">
@@ -147,7 +176,7 @@ error_reporting(0);
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/calendarController.js"></script>
+            <script src="controllers/calendarController-v1.js"></script>
 
 
 
