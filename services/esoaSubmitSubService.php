@@ -36,7 +36,7 @@ class ServiceClass
 	public function submitEsoaSub($treatment, $diagnosis, $details, $remarks, $price, $clientid, $esoaid, $hmo, $ref)
 	{
 		try {
-			$query = "Insert into treatmentsub(treatment,remarks,details,price,clientid,soaid,diagnosis,hmo) values (:a,:b,:c,:d,:e,:f,:g,:h)";
+			$query = "Insert into treatmentsub(treatment,remarks,details,price,clientid,soaid,diagnosis,hmo,ref) values (:a,:b,:c,:d,:e,:f,:g,:h,:i)";
 			$stmt = $this->conn->prepare($query);
 			$stmt->bindParam(':a', $treatment);
 			$stmt->bindParam(':b', $remarks);
@@ -47,6 +47,7 @@ class ServiceClass
 
 			$stmt->bindParam(':g', $diagnosis);
 			$stmt->bindParam(':h', $hmo);
+			$stmt->bindParam(':i', $ref);
 			$stmt->execute();
 
 			if ($ref != '') {
