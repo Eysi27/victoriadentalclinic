@@ -41,18 +41,14 @@ function addPatientPersonalInfo() {
     else if (firstName == "") {
         msg = "First Name is required";
     }
-    else if (nickName == "") {
-        msg = "Nickname is required";
-    }
+
     else if (civilStatus == "") {
         msg = "Civil Status is required";
     }
     else if (gender == "") {
         msg = "Gender is required";
     }
-    else if (religion == "") {
-        msg = "Religion is required";
-    }
+
 
     else if (birthday == null) {
         msg = "Birthday is required";
@@ -69,9 +65,7 @@ function addPatientPersonalInfo() {
         if (guardianName == "") {
             msg = "Guardian Name is required";
         }
-        else if (guardianOccupation == "") {
-            msg = "Guardian Occupation is required";
-        }
+
 
     }
 
@@ -80,7 +74,7 @@ function addPatientPersonalInfo() {
 
         switchToTab1("tab2-tab");
     } else {
-
+        // switchToTab1("tab2-tab");
         showToast("errorToast", msg);
     }
 
@@ -113,8 +107,12 @@ function validateHealthForm() {
 
     // 1. Good health
     const goodHealth = getRadioValue("goodHealth");
+    const goodHealthConditionInput = document.getElementById("goodhealthCondition");
+    const goodHealthCondition = goodHealthConditionInput.value.trim();
     if (!goodHealth) {
         return focusAndToast(document.getElementsByName("goodHealth")[0], "Please answer if you are in good health.");
+    } else if (goodHealth === "yes" && goodHealthCondition === "") {
+        return focusAndToast(goodHealthConditionInput, "Please specify the condition.");
     }
 
     // 2. Under treatment
@@ -411,6 +409,7 @@ function getMedicalFormValues() {
         officeNumber: document.getElementById("officeNumber").value.trim() || null,
         treatmentCondition: document.getElementById("treatmentCondition").value.trim() || null,
         goodHealth: document.querySelector('input[name="goodHealth"]:checked')?.value || null,
+        goodhealthCondition: document.getElementById("goodhealthCondition").value.trim() || null,
         underTreatment: document.querySelector('input[name="underTreatment"]:checked')?.value || null,
         treatmentCondition: document.getElementById("treatmentCondition").value.trim() || null,
 
@@ -477,12 +476,15 @@ function submitMedicalHistoryAjax() {
             result = result.trim();
             if (result === "success") {
                 message += "Medical History Added.<br>";
+
                 submitConsentform();
             } else {
+
                 toastError(result);
             }
         },
         error: function (xhr, status, error) {
+
             toastError("An error occurred: " + error);
         }
     });
