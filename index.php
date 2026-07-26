@@ -274,8 +274,9 @@
                                 </div>
                                 <div class="card-body" id="bodyResult" style="padding-right:10%;padding-left:10%">
                                     <div class="form-group">
-                                        <h6 class="mb-3 text-center">Dental History</h6>
-                                        <div class="row">
+
+                                        <div class="row" style="display:none;">
+                                            <h6 class="mb-3 text-center">Dental History</h6>
                                             <div class="col-lg-6 mb-6">
                                                 <label for="cardNumber">Previous Dentist: </label>
                                                 <input type="text" name="prevDentist" id="prevDentist"
@@ -987,7 +988,7 @@
 
 
 
-            <script src="controllers/clientRegistrationController-v8.js"></script>
+            <script src="controllers/clientRegistrationController-v9.js"></script>
 
 
 

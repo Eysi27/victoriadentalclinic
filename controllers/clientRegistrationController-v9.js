@@ -111,7 +111,7 @@ function validateHealthForm() {
     const goodHealthCondition = goodHealthConditionInput.value.trim();
     if (!goodHealth) {
         return focusAndToast(document.getElementsByName("goodHealth")[0], "Please answer if you are in good health.");
-    } else if (goodHealth === "yes" && goodHealthCondition === "") {
+    } else if (goodHealth === "no" && goodHealthCondition === "") {
         return focusAndToast(goodHealthConditionInput, "Please specify the condition.");
     }
 
