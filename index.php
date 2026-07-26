@@ -390,18 +390,18 @@
                                             </div>
                                         </div>
 
-                                       
-                                      <!-- Deleted question 3 here -->
-                                      <!-- Deleted question 4 here -->
-                                      <!-- Deleted question 5 here -->
-                                      <!-- Deleted question 6 here -->
-                                      <!-- Deleted question 7 here -->
-                                     
+
+                                        <!-- Deleted question 3 here -->
+                                        <!-- Deleted question 4 here -->
+                                        <!-- Deleted question 5 here -->
+                                        <!-- Deleted question 6 here -->
+                                        <!-- Deleted question 7 here -->
+
                                         <!--8-->
                                         <div class="row">
                                             <!-- Question Label -->
                                             <div class="col-lg-6 mb-3">
-                                                <label class="form-label mb-0">8. Are you allergic to any of the
+                                                <label class="form-label mb-0">3. Are you allergic to any of the
                                                     following:</label>
                                             </div>
 
@@ -491,7 +491,7 @@
                                         <!--9-->
                                         <div class="row">
                                             <div class="col-lg-12 mb-2">
-                                                <label class="form-label fw-bold">9. For women only:</label>
+                                                <label class="form-label fw-bold">4. For women only:</label>
                                             </div>
 
                                             <!-- Are you pregnant? -->
@@ -529,7 +529,7 @@
                                             </div>
 
                                             <!-- Are you taking birth control pills? -->
-                                          
+
                                         </div>
 
                                         <div style="display:none;">
