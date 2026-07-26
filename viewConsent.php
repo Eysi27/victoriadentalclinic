@@ -64,7 +64,8 @@ error_reporting(0);
                                 <img src="img/vadc_whitebg.png" alt="Logo"
                                     style="max-height: 100px; margin-right: 20px;">
                                 <div>
-                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Victoria Advanced Dental Care</h4>
+                                    <h4 style="margin-bottom: 5px; font-weight: bold;">Victoria Advanced Dental Care
+                                    </h4>
                                     <p style="margin: 0;">
                                         101 Iriga, Iriga City, Camarines Sur<br>
                                         (0968) 350 7067
@@ -115,9 +116,11 @@ error_reporting(0);
                                     <strong style="margin-right: 10px;">Civil Status:</strong>
                                     <?php echo trim($_GET["civilStatus"]); ?>
                                 </div>
-                                <div style="width: 50%; display: flex; align-items: center;">
-                                    <strong style="margin-right: 10px;">Religion:</strong>
-                                    <?php echo trim($_GET["religion"]); ?>
+                                <div style="display:none;">
+                                    <div style="width: 50%; display: flex; align-items: center;">
+                                        <strong style="margin-right: 10px;">Religion:</strong>
+                                        <?php echo trim($_GET["religion"]); ?>
+                                    </div>
                                 </div>
                             </div>
 
@@ -126,9 +129,13 @@ error_reporting(0);
                                     <strong style="margin-right: 10px;">Contact Number:</strong>
                                     <?php echo trim($_GET["mobileNumber"]); ?>
                                 </div>
-                                <div style="width: 50%; display: flex; align-items: center;">
-                                    <strong style="margin-right: 10px;">Referred By:</strong>
-                                    <?php echo trim($_GET["refferedBy"]); ?>
+                                <div style="display:none;">
+
+
+                                    <div style="width: 50%; display: flex; align-items: center;">
+                                        <strong style="margin-right: 10px;">Referred By:</strong>
+                                        <?php echo trim($_GET["refferedBy"]); ?>
+                                    </div>
                                 </div>
                             </div>
 
@@ -147,7 +154,7 @@ error_reporting(0);
                             <br>
                             <hr>
                             <br>
-                           
+
                             <!-- Page Heading -->
                             <div style="text-align:center;">
                                 <h1 class="h3">Informed Consent</h1>

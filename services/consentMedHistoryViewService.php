@@ -54,7 +54,7 @@ class ServiceClass
 
  <div style="width: 50%; display: flex; margin: 10px 30px;"><strong>Medical History</strong></div>
 
-<div style="display: flex; margin: 10px 30px;">
+<div style="display: none; margin: 10px 30px;">
     <div style="width: 50%; display: flex; align-items: center;">
         Physician:&nbsp;<strong>' . (!empty($row["physician"]) && $row["physician"] !== "null" ? htmlspecialchars($row["physician"]) : "<em>Not specified</em>") . '</strong>
     </div>
@@ -63,7 +63,7 @@ class ServiceClass
     </div>
 </div>
 
-<div style="display: flex; margin: 10px 30px;">
+<div style="display: none; margin: 10px 30px;">
     <div style="width: 50%; display: flex; align-items: center;">
         Office Address:&nbsp;<strong>' . (!empty($row["officeAddress"]) && $row["officeAddress"] !== "null" ? htmlspecialchars($row["officeAddress"]) : "<em>Not specified</em>") . '</strong>
     </div>
@@ -78,7 +78,10 @@ class ServiceClass
     <div style="width: 50%;">1. Are you in good health?</div>
     <div style="width: 50%;"><strong>' . ($row["goodHealth"] === "yes" ? "Yes" : ($row["goodHealth"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
 </div>
-
+<div style="display: flex; margin: 10px 30px;">
+    <div style="width: 50%;">- If so, what is the condition being treated?</div>
+    <div style="width: 50%;"><strong>' . ($row["goodhealthCondition"] === "null" || empty($row["goodhealthCondition"]) ? "<em>None specified</em>" : htmlspecialchars($row["goodhealthCondition"])) . '</strong></div>
+</div>
 <div style="display: flex; margin: 10px 30px;">
     <div style="width: 50%;">2. Are you under medical treatment now?</div>
     <div style="width: 50%;"><strong>' . ($row["underTreatment"] === "yes" ? "Yes" : ($row["underTreatment"] === "no" ? "No" : "<em>Not specified</em>")) . '</strong></div>
@@ -101,7 +104,7 @@ class ServiceClass
 <!-- 8. Are you allergic to any of the following -->
 <div style="display: flex; margin: 10px 30px;">
     <div style="width: 50%; display: flex; align-items: center;">
-        8. Are you allergic to any of the following:
+        3. Are you allergic to any of the following:
     </div>
     <div style="width: 50%; display: flex; align-items: center;">
         <strong>' . (
@@ -144,7 +147,7 @@ class ServiceClass
                                       <!-- 9. For women only -->
 <div style="margin: 10px 30px;">
     <div style="font-weight: bold; margin-bottom: 8px;">
-        9. For women only:
+        4. For women only:
     </div>
 
     <!-- Are you pregnant? -->
@@ -231,7 +234,10 @@ class ServiceClass
 
 
 
-                    echo ' <h6 style="margin: 20px 30px 10px;">Medical Conditions</h6>';
+                    echo '
+                    <div style="display:none;">
+                    
+                     <h6 style="margin: 20px 30px 10px;">Medical Conditions</h6>';
                     echo '<div style="display: flex; justify-content: space-between; margin: 10px 30px; line-height: 1.5;">'; // compact text with left/right margin
 
                     $flagIndex = 0;
@@ -259,7 +265,7 @@ class ServiceClass
                         echo '</div>';
                     }
 
-                    echo '</div>';
+                    echo '</div> </div>';
 
 
 

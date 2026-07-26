@@ -100,7 +100,7 @@ class ServiceClass
                                                         id="goodHealthYes" value="yes" ';
                     if ($row['goodHealth'] === 'yes')
                         echo 'checked';
-                    echo ' onclick="toggleCondition(true,\'goodhealthCondition\')">
+                    echo ' onclick="toggleCondition(false,\'goodhealthCondition\')">
                                                     <label class="form-check-label" for="goodHealthYes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -108,7 +108,7 @@ class ServiceClass
                                                         id="goodHealthNo" value="no"';
                     if ($row['goodHealth'] === 'no')
                         echo 'checked';
-                    echo ' onclick="toggleCondition(false,\'goodhealthCondition\')">
+                    echo ' onclick="toggleCondition(true,\'goodhealthCondition\')">
                                                     <label class="form-check-label" for="goodHealthNo">No</label>
                                                 </div>
                                             </div>
@@ -119,7 +119,7 @@ class ServiceClass
                                                 <label for="goodhealthCondition" class="form-label">-If not, please
                                                     specify?</label>
                                                 <input type="text" id="goodhealthCondition" name="goodhealthCondition"
-                                                    class="form-control" placeholder="Please specify" disabled>
+                                                    class="form-control" placeholder="Please specify">
                                             </div>
     ';
                     } else {
@@ -127,7 +127,7 @@ class ServiceClass
                                                 <label for="goodhealthCondition" class="form-label">-If not, please
                                                     specify?</label>
                                                 <input type="text" id="goodhealthCondition" name="goodhealthCondition"
-                                                    class="form-control" placeholder="Please specify" value="' . $row['goodhealthCondition'] . '">
+                                                    class="form-control" placeholder="Please specify" value="' . $row['goodhealthCondition'] . '" disabled>
                                             </div>
                                             ';
                     }
