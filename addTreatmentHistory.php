@@ -161,8 +161,22 @@ error_reporting(0);
                                     <textarea id="diagnosis" class="form-control" name="diagnosis"
                                         placeholder="Diagnosis"></textarea>
                                     <label for="treatment">Details</label>
-                                    <textarea id="details" class="form-control" name="details"
-                                        placeholder="Details"></textarea>
+
+                                    <input list="details-options" id="details" name="details" class="form-control"
+                                        placeholder="Details" />
+
+                                    <datalist id="details-options">
+                                        <option>Ultrablend</option>
+                                        <option>Add anesthesia</option>
+                                        <option>Replacement</option>
+                                        <option>Rebracket</option>
+                                        <option>TF</option>
+                                        <option>Denture repair</option>
+                                        <option>Brace removal</option>
+                                        <!-- Add more options as needed -->
+                                    </datalist>
+
+
                                     <label for="treatment">Remarks</label>
                                     <input type="Text" name="remarks" id="remarks" placeholder="Input Remarks"
                                         class="form-control" value="">
