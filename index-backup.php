@@ -47,7 +47,8 @@
                     <div class="col-lg-12 d-flex align-items-center justify-content-between">
                         <!-- Left Side: Logo and Clinic Info -->
                         <div class="d-flex align-items-center">
-                            <img src="img/vadc_whitebg.png" alt="Logo" style="max-height:100px; margin-right: 20px;">
+                            <img src="img/vadc_whitebg.png" alt="Logo"
+                                style="max-height:100px; margin-right: 20px;">
                             <div>
                                 <h4 class="mb-1"><strong>Victoria Advanced Dental Care</strong></h4>
                                 <p class="mb-0">101 Iriga, Iriga City, Camarines Sur</p>
@@ -146,12 +147,10 @@
                                                     <option value="Separated">Separated</option>
                                                     <option value="Divorced">Divorced</option>
                                                 </select>
-                                                <div style="display:none">
-                                                    <label for="religion">Religion</label>
-                                                    <input type="text" name="religion" id="religion"
-                                                        placeholder="Religion" class="form-control mb-2">
-                                                </div>
 
+                                                <label for="religion">Religion</label>
+                                                <input type="text" name="religion" id="religion" placeholder="Religion"
+                                                    class="form-control mb-2">
 
                                                 <label for="emailAddress">Email Address</label>
                                                 <input type="text" name="emailAddress" id="emailAddress"
@@ -186,12 +185,10 @@
                                                 <label for="contactNumber">Contact Number</label>
                                                 <input type="text" name="contactNumber" id="contactNumber"
                                                     placeholder="Contact Number" class="form-control mb-2">
-                                                <div style="display:none">
-                                                    <label for="referredBy">Referred By</label>
-                                                    <input type="text" name="referredBy" id="referredBy"
-                                                        placeholder="Referred By" class="form-control mb-2">
-                                                </div>
 
+                                                <label for="referredBy">Referred By</label>
+                                                <input type="text" name="referredBy" id="referredBy"
+                                                    placeholder="Referred By" class="form-control mb-2">
                                             </div>
 
                                             <div class="col-lg-4 mb-4">
@@ -199,13 +196,10 @@
                                                 <label for="guardianName">Guardian Name</label>
                                                 <input type="text" name="guardianName" id="guardianName"
                                                     placeholder="Guardian Name" class="form-control mb-2">
-                                                <div style="display:none">
 
-
-                                                    <label for="guardianOccupation">Guardian Occupation</label>
-                                                    <input type="text" name="guardianOccupation" id="guardianOccupation"
-                                                        placeholder="Guardian Occupation" class="form-control mb-2">
-                                                </div>
+                                                <label for="guardianOccupation">Guardian Occupation</label>
+                                                <input type="text" name="guardianOccupation" id="guardianOccupation"
+                                                    placeholder="Guardian Occupation" class="form-control mb-2">
                                             </div>
                                         </div>
 
@@ -291,37 +285,35 @@
                                         </div>
                                         <hr>
                                         <h6 class="mb-3 text-center">Medical History</h6>
-                                        <div style="display: none;">
-                                            <div class="row">
-                                                <div class="col-lg-6 mb-6">
-                                                    <label for="cardNumber">Name of Physician :</label>
-                                                    <input type="text" name="physician" id="physician"
-                                                        placeholder="Physician Full name" class="form-control mb-2">
-
-                                                </div>
-                                                <div class="col-lg-6 mb-6">
-                                                    <label for="cardNumber">Specialty, if applicable: </label>
-                                                    <input type="text" name="specialty" id="specialty"
-                                                        placeholder="Please specify" class="form-control mb-2">
-
-                                                </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-6">
+                                                <label for="cardNumber">Name of Physician :</label>
+                                                <input type="text" name="physician" id="physician"
+                                                    placeholder="Physician Full name" class="form-control mb-2">
 
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-6 mb-6">
-                                                    <label for="cardNumber">Office Address:</label>
-                                                    <input type="text" name="officeAddress" id="officeAddress"
-                                                        placeholder="Office Address" class="form-control mb-2">
-
-                                                </div>
-                                                <div class="col-lg-6 mb-6">
-                                                    <label for="cardNumber">Office Number:</label>
-                                                    <input type="text" name="officeNumber" id="officeNumber"
-                                                        placeholder="Office Number" class="form-control mb-2">
-
-                                                </div>
+                                            <div class="col-lg-6 mb-6">
+                                                <label for="cardNumber">Specialty, if applicable: </label>
+                                                <input type="text" name="specialty" id="specialty"
+                                                    placeholder="Please specify" class="form-control mb-2">
 
                                             </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-6">
+                                                <label for="cardNumber">Office Address:</label>
+                                                <input type="text" name="officeAddress" id="officeAddress"
+                                                    placeholder="Office Address" class="form-control mb-2">
+
+                                            </div>
+                                            <div class="col-lg-6 mb-6">
+                                                <label for="cardNumber">Office Number:</label>
+                                                <input type="text" name="officeNumber" id="officeNumber"
+                                                    placeholder="Office Number" class="form-control mb-2">
+
+                                            </div>
+
                                         </div>
                                         <hr>
                                         <div class="row">
@@ -334,24 +326,14 @@
                                             <div class="col-lg-6 mb-3">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="goodHealth"
-                                                        id="goodHealthYes" value="yes"
-                                                        onclick="toggleCondition(true,'goodhealthCondition')">
-
+                                                        id="goodHealthYes" value="yes">
                                                     <label class="form-check-label" for="goodHealthYes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="goodHealth"
-                                                        id="goodHealthNo" value="no"
-                                                        onclick="toggleCondition(false,'goodhealthCondition')">
+                                                        id="goodHealthNo" value="no">
                                                     <label class="form-check-label" for="goodHealthNo">No</label>
                                                 </div>
-                                            </div>
-                                            <!-- Conditional Input Field -->
-                                            <div class="col-lg-12 mb-3">
-                                                <label for="goodhealthCondition" class="form-label">-If not, please
-                                                    specify?</label>
-                                                <input type="text" id="goodhealthCondition" name="goodhealthCondition"
-                                                    class="form-control" placeholder="Please specify" disabled>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -390,13 +372,163 @@
                                             </div>
                                         </div>
 
-                                       
-                                      <!-- Deleted question 3 here -->
-                                      <!-- Deleted question 4 here -->
-                                      <!-- Deleted question 5 here -->
-                                      <!-- Deleted question 6 here -->
-                                      <!-- Deleted question 7 here -->
-                                     
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">3. Have you ever had serious
+                                                        illness
+                                                        or surgical operation?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessYes" value="yes"
+                                                        onclick="toggleCondition(true, 'illnessCondition')">
+                                                    <label class="form-check-label" for="seriousIllnessYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="seriousIllness"
+                                                        id="seriousIllnessNo" value="no"
+                                                        onclick="toggleCondition(false, 'illnessCondition')">
+                                                    <label class="form-check-label" for="seriousIllnessNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="illnessCondition" class="form-label">- If so, what
+                                                    illness
+                                                    or operation?</label>
+                                                <input type="text" id="illnessCondition" name="illnessCondition"
+                                                    class="form-control" placeholder="Describe the illness or operation"
+                                                    disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">4. Have you ever been
+                                                        hospitalized?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedYes" value="yes"
+                                                        onclick="toggleCondition(true, 'hospitalizedCondition')">
+                                                    <label class="form-check-label" for="hospitalizedYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hospitalized"
+                                                        id="hospitalizedNo" value="no"
+                                                        onclick="toggleCondition(false, 'hospitalizedCondition')">
+                                                    <label class="form-check-label" for="hospitalizedNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="hospitalizedCondition" class="form-label">- If so, when
+                                                    and
+                                                    why?</label>
+                                                <input type="text" id="hospitalizedCondition"
+                                                    name="hospitalizedCondition" class="form-control"
+                                                    placeholder="Provide the date and reason for hospitalization"
+                                                    disabled>
+                                            </div>
+                                        </div>
+                                        <!--5-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">5. Are you taking any
+                                                        prescription/non-prescription medication?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationYes" value="yes"
+                                                        onclick="toggleCondition(true, 'medicationCondition')">
+                                                    <label class="form-check-label" for="medicationYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="medication"
+                                                        id="medicationNo" value="no"
+                                                        onclick="toggleCondition(false, 'medicationCondition')">
+                                                    <label class="form-check-label" for="medicationNo">No</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Conditional Input Field -->
+                                            <div class="col-lg-12 mb-3">
+                                                <label for="medicationCondition" class="form-label">- If so, please
+                                                    specify:</label>
+                                                <input type="text" id="medicationCondition" name="medicationCondition"
+                                                    class="form-control" placeholder="List medications being taken"
+                                                    disabled>
+                                            </div>
+                                        </div>
+                                        <!--6-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">6. Do you use tobacco
+                                                        products?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseYes" value="yes">
+                                                    <label class="form-check-label" for="tobaccoUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tobaccoUse"
+                                                        id="tobaccoUseNo" value="no">
+                                                    <label class="form-check-label" for="tobaccoUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--7-->
+                                        <div class="row">
+                                            <!-- Question Label -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <label class="form-label mb-0">7. Do you use alcohol, cocaine or
+                                                        other dangerous drugs?</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yes/No Options -->
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseYes" value="yes">
+                                                    <label class="form-check-label" for="substanceUseYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="substanceUse"
+                                                        id="substanceUseNo" value="no">
+                                                    <label class="form-check-label" for="substanceUseNo">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--8-->
                                         <div class="row">
                                             <!-- Question Label -->
@@ -529,197 +661,181 @@
                                             </div>
 
                                             <!-- Are you taking birth control pills? -->
-                                          
+                                            <div class="col-lg-6 mb-3">
+                                                <label class="form-label mb-0">Are you taking birth control
+                                                    pills?</label>
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlYes" value="yes">
+                                                    <label class="form-check-label" for="birthControlYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="birthControl"
+                                                        id="birthControlNo" value="no">
+                                                    <label class="form-check-label" for="birthControlNo">No</label>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        <div style="display:none;">
-                                            <hr>
-                                            <label class="form-label"><strong>Medical Conditions (Check all that
-                                                    apply):</strong></label>
+                                        <hr>
+                                        <label class="form-label"><strong>Medical Conditions (Check all that
+                                                apply):</strong></label>
 
-                                            <div class="row">
-                                                <!-- Column 1 -->
-                                                <div class="col-md-4">
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q1" name="q1"
-                                                            value="High Blood Pressure"><label class="form-check-label"
-                                                            for="q1">High Blood Pressure</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q2" name="q2"
-                                                            value="Low Blood Pressure"><label class="form-check-label"
-                                                            for="q2">Low Blood Pressure</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q3" name="q3"
-                                                            value="Epilepsy / Convulsions"><label
-                                                            class="form-check-label" for="q3">Epilepsy /
-                                                            Convulsions</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q4" name="q4"
-                                                            value="AIDS or HIV Infection"><label
-                                                            class="form-check-label" for="q4">AIDS or HIV
-                                                            Infection</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q5" name="q5"
-                                                            value="Sexually Transmitted disease"><label
-                                                            class="form-check-label" for="q5">Sexually Transmitted
-                                                            disease</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q6" name="q6"
-                                                            value="Stomach Troubles / Ulcers"><label
-                                                            class="form-check-label" for="q6">Stomach Troubles /
-                                                            Ulcers</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q7" name="q7"
-                                                            value="Fainting Seizure"><label class="form-check-label"
-                                                            for="q7">Fainting Seizure</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q8" name="q8"
-                                                            value="Rapid Weight Loss"><label class="form-check-label"
-                                                            for="q8">Rapid Weight Loss</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q9" name="q9"
-                                                            value="Heart Disease"><label class="form-check-label"
-                                                            for="q9">Heart Disease</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q10" name="q10"
-                                                            value="Heart Murmur"><label class="form-check-label"
-                                                            for="q10">Heart Murmur</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q11" name="q11"
-                                                            value="Hepatitis / Liver Disease"><label
-                                                            class="form-check-label" for="q11">Hepatitis / Liver
-                                                            Disease</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q12" name="q12"
-                                                            value="Rheumatic Fever"><label class="form-check-label"
-                                                            for="q12">Rheumatic Fever</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q13" name="q13"
-                                                            value="Hay Fever / Allergies"><label
-                                                            class="form-check-label" for="q13">Hay Fever /
-                                                            Allergies</label>
-                                                    </div>
+                                        <div class="row">
+                                            <!-- Column 1 -->
+                                            <div class="col-md-4">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q1" name="q1" value="High Blood Pressure"><label
+                                                        class="form-check-label" for="q1">High Blood Pressure</label>
                                                 </div>
-
-                                                <!-- Column 2 -->
-                                                <div class="col-md-4">
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q14" name="q14"
-                                                            value="Respiratory Problems"><label class="form-check-label"
-                                                            for="q14">Respiratory Problems</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q15" name="q15"
-                                                            value="Hepatitis / Jaundice"><label class="form-check-label"
-                                                            for="q15">Hepatitis / Jaundice</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q16" name="q16"
-                                                            value="Tuberculosis"><label class="form-check-label"
-                                                            for="q16">Tuberculosis</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q17" name="q17"
-                                                            value="Radiation Therapy"><label class="form-check-label"
-                                                            for="q17">Radiation Therapy</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q18" name="q18"
-                                                            value="Swollen ankles"><label class="form-check-label"
-                                                            for="q18">Swollen ankles</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q19" name="q19"
-                                                            value="Joint Replacement / Implant"><label
-                                                            class="form-check-label" for="q19">Joint Replacement /
-                                                            Implant</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q20" name="q20"
-                                                            value="Kidney disease"><label class="form-check-label"
-                                                            for="q20">Kidney disease</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q21" name="q21"
-                                                            value="Heart Surgery"><label class="form-check-label"
-                                                            for="q21">Heart Surgery</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q22" name="q22" value="Diabetes"><label
-                                                            class="form-check-label" for="q22">Diabetes</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q23" name="q23"
-                                                            value="Heart Attack"><label class="form-check-label"
-                                                            for="q23">Heart Attack</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q24" name="q24"
-                                                            value="Chest pain"><label class="form-check-label"
-                                                            for="q24">Chest pain</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q25" name="q25"
-                                                            value="Thyroid Problem"><label class="form-check-label"
-                                                            for="q25">Thyroid Problem</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q26" name="q26" value="Stroke"><label
-                                                            class="form-check-label" for="q26">Stroke</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q2" name="q2" value="Low Blood Pressure"><label
+                                                        class="form-check-label" for="q2">Low Blood Pressure</label>
                                                 </div>
-
-                                                <!-- Column 3 -->
-                                                <div class="col-md-4">
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q27" name="q27"
-                                                            value="Cancer / Tumors"><label class="form-check-label"
-                                                            for="q27">Cancer / Tumors</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q28" name="q28" value="Anemia"><label
-                                                            class="form-check-label" for="q28">Anemia</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q29" name="q29" value="Angina"><label
-                                                            class="form-check-label" for="q29">Angina</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q30" name="q30" value="Asthma"><label
-                                                            class="form-check-label" for="q30">Asthma</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q31" name="q31" value="Emphysema"><label
-                                                            class="form-check-label" for="q31">Emphysema</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q32" name="q32"
-                                                            value="Bleeding Problems"><label class="form-check-label"
-                                                            for="q32">Bleeding Problems</label>
-                                                    </div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q33" name="q33"
-                                                            value="Blood Diseases"><label class="form-check-label"
-                                                            for="q33">Blood Diseases</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q34" name="q34"
-                                                            value="Head Injuries"><label class="form-check-label"
-                                                            for="q34">Head Injuries</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q35" name="q35"
-                                                            value="Arthritis / Rheumatism"><label
-                                                            class="form-check-label" for="q35">Arthritis /
-                                                            Rheumatism</label></div>
-                                                    <div class="form-check"><input class="form-check-input"
-                                                            type="checkbox" id="q36" name="q36"
-                                                            value="Rapid Weight Loss"><label class="form-check-label"
-                                                            for="q36">Rapid Weight Loss</label>
-                                                    </div>
-
-                                                    <!-- Other (Specify) -->
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="q37"
-                                                            name="q37" value="Other"
-                                                            onclick="document.getElementById('otherCondition').disabled = !this.checked;">
-                                                        <label class="form-check-label" for="q37">Other</label>
-                                                    </div>
-                                                    <input type="text" id="otherCondition" name="otherCondition"
-                                                        class="form-control mt-2" placeholder="Specify other condition"
-                                                        disabled>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q3" name="q3" value="Epilepsy / Convulsions"><label
+                                                        class="form-check-label" for="q3">Epilepsy /
+                                                        Convulsions</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q4" name="q4" value="AIDS or HIV Infection"><label
+                                                        class="form-check-label" for="q4">AIDS or HIV
+                                                        Infection</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q5" name="q5" value="Sexually Transmitted disease"><label
+                                                        class="form-check-label" for="q5">Sexually Transmitted
+                                                        disease</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q6" name="q6" value="Stomach Troubles / Ulcers"><label
+                                                        class="form-check-label" for="q6">Stomach Troubles /
+                                                        Ulcers</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q7" name="q7" value="Fainting Seizure"><label
+                                                        class="form-check-label" for="q7">Fainting Seizure</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q8" name="q8" value="Rapid Weight Loss"><label
+                                                        class="form-check-label" for="q8">Rapid Weight Loss</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q9" name="q9" value="Heart Disease"><label
+                                                        class="form-check-label" for="q9">Heart Disease</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q10" name="q10" value="Heart Murmur"><label
+                                                        class="form-check-label" for="q10">Heart Murmur</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q11" name="q11" value="Hepatitis / Liver Disease"><label
+                                                        class="form-check-label" for="q11">Hepatitis / Liver
+                                                        Disease</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q12" name="q12" value="Rheumatic Fever"><label
+                                                        class="form-check-label" for="q12">Rheumatic Fever</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q13" name="q13" value="Hay Fever / Allergies"><label
+                                                        class="form-check-label" for="q13">Hay Fever /
+                                                        Allergies</label>
                                                 </div>
                                             </div>
 
+                                            <!-- Column 2 -->
+                                            <div class="col-md-4">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q14" name="q14" value="Respiratory Problems"><label
+                                                        class="form-check-label" for="q14">Respiratory Problems</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q15" name="q15" value="Hepatitis / Jaundice"><label
+                                                        class="form-check-label" for="q15">Hepatitis / Jaundice</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q16" name="q16" value="Tuberculosis"><label
+                                                        class="form-check-label" for="q16">Tuberculosis</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q17" name="q17" value="Radiation Therapy"><label
+                                                        class="form-check-label" for="q17">Radiation Therapy</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q18" name="q18" value="Swollen ankles"><label
+                                                        class="form-check-label" for="q18">Swollen ankles</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q19" name="q19" value="Joint Replacement / Implant"><label
+                                                        class="form-check-label" for="q19">Joint Replacement /
+                                                        Implant</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q20" name="q20" value="Kidney disease"><label
+                                                        class="form-check-label" for="q20">Kidney disease</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q21" name="q21" value="Heart Surgery"><label
+                                                        class="form-check-label" for="q21">Heart Surgery</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q22" name="q22" value="Diabetes"><label
+                                                        class="form-check-label" for="q22">Diabetes</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q23" name="q23" value="Heart Attack"><label
+                                                        class="form-check-label" for="q23">Heart Attack</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q24" name="q24" value="Chest pain"><label
+                                                        class="form-check-label" for="q24">Chest pain</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q25" name="q25" value="Thyroid Problem"><label
+                                                        class="form-check-label" for="q25">Thyroid Problem</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q26" name="q26" value="Stroke"><label
+                                                        class="form-check-label" for="q26">Stroke</label></div>
+                                            </div>
+
+                                            <!-- Column 3 -->
+                                            <div class="col-md-4">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q27" name="q27" value="Cancer / Tumors"><label
+                                                        class="form-check-label" for="q27">Cancer / Tumors</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q28" name="q28" value="Anemia"><label
+                                                        class="form-check-label" for="q28">Anemia</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q29" name="q29" value="Angina"><label
+                                                        class="form-check-label" for="q29">Angina</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q30" name="q30" value="Asthma"><label
+                                                        class="form-check-label" for="q30">Asthma</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q31" name="q31" value="Emphysema"><label
+                                                        class="form-check-label" for="q31">Emphysema</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q32" name="q32" value="Bleeding Problems"><label
+                                                        class="form-check-label" for="q32">Bleeding Problems</label>
+                                                </div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q33" name="q33" value="Blood Diseases"><label
+                                                        class="form-check-label" for="q33">Blood Diseases</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q34" name="q34" value="Head Injuries"><label
+                                                        class="form-check-label" for="q34">Head Injuries</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q35" name="q35" value="Arthritis / Rheumatism"><label
+                                                        class="form-check-label" for="q35">Arthritis /
+                                                        Rheumatism</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="q36" name="q36" value="Rapid Weight Loss"><label
+                                                        class="form-check-label" for="q36">Rapid Weight Loss</label>
+                                                </div>
+
+                                                <!-- Other (Specify) -->
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="q37" name="q37"
+                                                        value="Other"
+                                                        onclick="document.getElementById('otherCondition').disabled = !this.checked;">
+                                                    <label class="form-check-label" for="q37">Other</label>
+                                                </div>
+                                                <input type="text" id="otherCondition" name="otherCondition"
+                                                    class="form-control mt-2" placeholder="Specify other condition"
+                                                    disabled>
+                                            </div>
                                         </div>
+
+
                                         <hr>
 
 
@@ -987,7 +1103,7 @@
 
 
 
-            <script src="controllers/clientRegistrationController-v8.js"></script>
+            <script src="controllers/clientRegistrationController-v7.js"></script>
 
 
 

@@ -62,7 +62,7 @@
                         <!--tab 3-->
                         <div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                             <div class="col-lg-12 d-flex align-items-center" style="margin:50px;">
-                                <img src="img/white_logo_final.jpg" alt="Logo"
+                                <img src="img/vadc_whitebg.png" alt="Logo"
                                     style="max-height:100px; margin-right: 20px;">
                                 <div>
                                     <h4 class="mb-1"><strong>Victoria Advanced Dental Carec</strong>
