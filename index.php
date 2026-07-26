@@ -335,14 +335,14 @@
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="goodHealth"
                                                         id="goodHealthYes" value="yes"
-                                                        onclick="toggleCondition(true,'goodhealthCondition')">
+                                                        onclick="toggleCondition(false,'goodhealthCondition')">
 
                                                     <label class="form-check-label" for="goodHealthYes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="goodHealth"
                                                         id="goodHealthNo" value="no"
-                                                        onclick="toggleCondition(false,'goodhealthCondition')">
+                                                        onclick="toggleCondition(true,'goodhealthCondition')">
                                                     <label class="form-check-label" for="goodHealthNo">No</label>
                                                 </div>
                                             </div>
