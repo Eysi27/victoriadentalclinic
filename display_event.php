@@ -63,7 +63,7 @@ if (mysqli_num_rows($results) > 0) {
 			} elseif (strpos($dentist, 'VEM') !== false) {
 				$event['color'] = 'orange';
 			} else {
-				$event['color'] = '#343a40';
+				$event['color'] = 'blue-green';
 			}
 
 		}
