@@ -35,7 +35,10 @@ if (mysqli_num_rows($results) > 0) {
 
 		$event = array();
 		$event['event_id'] = $row['event_id'];
-		$event['title'] = "\n" . $eventName;
+		$formattedTime = date("g:i A", strtotime($row['event_time']));
+
+		$event['title'] = $eventName . "\nTime: " . $formattedTime;
+
 		$event['start'] = $start->format('Y-m-d\TH:i:s');
 		$event['end'] = $end->format('Y-m-d\TH:i:s');
 		$event['url'] = '#';

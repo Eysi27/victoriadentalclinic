@@ -60,8 +60,8 @@ function display_events() {
         selectable: true,
         selectHelper: true,
 
-        // Display time as 8:30 AM
-        timeFormat: 'h:mm A',
+        // Hide the default time displayed by FullCalendar
+        displayEventTime: false,
 
         events: events,
 

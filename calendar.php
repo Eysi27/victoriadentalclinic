@@ -179,7 +179,7 @@ Dentist:</textarea>
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/calendarController-v2.js"></script>
+            <script src="controllers/calendarController-v3.js"></script>
 
 
 
