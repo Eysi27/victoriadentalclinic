@@ -161,7 +161,7 @@ $today = date('Y-m-d');
                                 </div>
                                 <div class="col-sm-4 mb-2">
                                     <div class="small text-uppercase text-muted mb-1">Commission</div>
-                                    <div class="font-weight-bold text-primary" id="payslipCommission">12%</div>
+                                    <div class="font-weight-bold text-primary" id="payslipCommission">10%</div>
                                 </div>
                             </div>
                             <div id="loading"
