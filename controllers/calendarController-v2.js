@@ -27,47 +27,65 @@ toggleEventInput();
 
 
 function display_events() {
-  var events = new Array();
+
   $.ajax({
     url: 'display_event.php',
     dataType: 'json',
     success: function (response) {
 
-      var result = response.data;
-      $.each(result, function (i, item) {
+      var events = [];
+
+      $.each(response.data, function (i, item) {
+
         events.push({
-          event_id: result[i].event_id,
-          title: result[i].title,
-          start: result[i].start,
-          end: result[i].end,
-          color: result[i].color,
-          url: result[i].url
+          event_id: item.event_id,
+          title: item.title,
+          start: item.start,
+          end: item.end,
+          color: item.color,
+          url: item.url
         });
-      })
-      var calendar = $('#calendar').fullCalendar({
+
+      });
+
+      // Destroy existing calendar before recreating
+      if ($('#calendar').data('fullCalendar')) {
+        $('#calendar').fullCalendar('destroy');
+      }
+
+      $('#calendar').fullCalendar({
         defaultView: 'month',
         timeZone: 'local',
         editable: true,
         selectable: true,
         selectHelper: true,
-        select: function (start, end) {
 
+        // Display time as 8:30 AM
+        timeFormat: 'h:mm A',
+
+        events: events,
+
+        select: function (start, end) {
           $('#event_start_date').val(moment(start).format('YYYY-MM-DD'));
           $('#event_end_date').val(moment(end).format('YYYY-MM-DD'));
           $('#event_entry_modal').modal('show');
         },
-        events: events,
-        eventRender: function (event, element, view) {
-          element.bind('click', function () {
+
+        eventRender: function (event, element) {
+          element.on('click', function () {
             eventDeletion(event.event_id);
           });
         }
-      }); //end fullCalendar block	
-    },//end success block
-    error: function (xhr, status) {
-      // alert(response.msg);
+      });
+
+    },
+
+    error: function (xhr, status, error) {
+      console.log(error);
     }
-  });//end ajax block	
+
+  });
+
 }
 function eventDeletion(id) {
 
@@ -112,6 +130,8 @@ function save_event() {
     alert("Please enter all required details.");
     return false;
   }
+  var event_time = $("#appointmentTime").val(); // e.g. "14:30"
+
 
   $.ajax({
     url: "save_event.php",
@@ -120,7 +140,8 @@ function save_event() {
     data: {
       event_name: event_name,
       event_start_date: event_start_date,
-      event_end_date: event_end_date
+      event_end_date: event_end_date,
+      event_time: event_time
     },
     success: function (response) {
       $("#event_entry_modal").modal("hide");

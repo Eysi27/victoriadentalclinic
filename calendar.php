@@ -94,19 +94,19 @@ error_reporting(0);
 
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="eventType"
-                                                        id="defaultEvent" value="default" checked>
+                                                        id="defaultEvent" value="default">
                                                     <label class="form-check-label" for="defaultEvent">Default</label>
                                                 </div>
 
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="eventType"
-                                                        id="customEvent" value="custom">
+                                                        id="customEvent" value="custom" checked>
                                                     <label class="form-check-label" for="customEvent">Custom</label>
                                                 </div>
                                             </div>
 
                                             <!-- Default Select -->
-                                            <div class="form-group" id="defaultEventContainer">
+                                            <div class="form-group" id="defaultEventContainer" style="display:none;">
                                                 <label for="event_name">Event Name</label>
                                                 <select id="event_name" class="form-control">
                                                     <option value="Closed">Closed</option>
@@ -116,13 +116,16 @@ error_reporting(0);
                                             </div>
 
                                             <!-- Custom Textarea -->
-                                            <div class="form-group" id="customEventContainer" style="display:none;">
-                                                <label for="custom_event_name">Custom Event Name</label>
+                                            <div class="form-group" id="customEventContainer">
+
+                                                <label for="appointmentTime">Appointment Time</label>
+                                                <input type="time" class="form-control" id="appointmentTime"
+                                                    name="appointmentTime" step="1800" value="08:00">
+                                                <label for="custom_event_name">Details</label>
                                                 <textarea id="custom_event_name" class="form-control" rows="6">Patient:
 Contact:
 Procedure:
-Dentist:
-Time:</textarea>
+Dentist:</textarea>
                                             </div>
 
                                         </div>
@@ -176,7 +179,7 @@ Time:</textarea>
             <script src="js/sb-admin-2.min.js"></script>
             <script src="controllers/logOutConroller.js"></script>
             <script src="controllers/sessionController.js"></script>
-            <script src="controllers/calendarController-v1.js"></script>
+            <script src="controllers/calendarController-v2.js"></script>
 
 
 

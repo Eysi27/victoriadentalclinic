@@ -1,20 +1,49 @@
 <?php
 require 'database_connection.php';
-$display_query = "select event_id,event_name,event_start_date,event_end_date from calendar_event_master";
+
+$display_query = "
+SELECT
+    event_id,
+    event_name,
+    event_start_date,
+    event_end_date,
+    event_time
+FROM calendar_event_master
+ORDER BY event_start_date ASC, event_time ASC
+";
+
 $results = mysqli_query($con, $display_query);
-$count = mysqli_num_rows($results);
-if ($count > 0) {
-	$data_arr = array();
-	$i = 1;
-	while ($data_row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
-		$eventName = trim($data_row['event_name']);
-		$data_arr[$i]['event_id'] = $data_row['event_id'];
-		$data_arr[$i]['title'] = $data_row['event_name'];
-		$data_arr[$i]['start'] = date("Y-m-d", strtotime($data_row['event_start_date']));
-		$data_arr[$i]['end'] = date("Y-m-d", strtotime($data_row['event_end_date']));
-		// $data_arr[$i]['color'] = '#'.substr(uniqid(),-6); // 'green'; pass colour name
+
+$data_arr = array();
+
+if (mysqli_num_rows($results) > 0) {
+
+	while ($row = mysqli_fetch_assoc($results)) {
+
+		// Build the start datetime
+		$start = new DateTime(
+			date('Y-m-d', strtotime($row['event_start_date'])) .
+			' ' .
+			$row['event_time']
+		);
+
+		// Appointment duration = 30 minutes
+		$end = clone $start;
+		$end->modify('+30 minutes');
+
+		$eventName = trim($row['event_name']);
+
+		$event = array();
+		$event['event_id'] = $row['event_id'];
+		$event['title'] = "\n" . $eventName;
+		$event['start'] = $start->format('Y-m-d\TH:i:s');
+		$event['end'] = $end->format('Y-m-d\TH:i:s');
+		$event['url'] = '#';
+
 		if (in_array($eventName, ['Closed', 'Fully Booked', 'Holiday-Closed'])) {
-			$data_arr[$i]['color'] = '#dc3545'; // Red
+
+			$event['color'] = '#dc3545';
+
 		} else {
 
 			$dentist = '';
@@ -23,44 +52,37 @@ if ($count > 0) {
 				$dentist = strtoupper(trim($matches[1]));
 			}
 
-			if (str_contains($dentist, 'JAO')) {
-				$data_arr[$i]['color'] = "blue";
-			} else if (str_contains($dentist, 'CARYL')) {
-				$data_arr[$i]['color'] = "#4E1F6E";  //violet
-			} else if (str_contains($dentist, 'KIM')) {
-				$data_arr[$i]['color'] = "#F62477"; //pink
-			} else if (str_contains($dentist, 'DANTE')) {
-				$data_arr[$i]['color'] = "green";
-			} else if (str_contains($dentist, 'VEM')) {
-				$data_arr[$i]['color'] = "orange";
+			if (strpos($dentist, 'JAO') !== false) {
+				$event['color'] = 'blue';
+			} elseif (strpos($dentist, 'CARYL') !== false) {
+				$event['color'] = '#4E1F6E';
+			} elseif (strpos($dentist, 'KIM') !== false) {
+				$event['color'] = '#F62477';
+			} elseif (strpos($dentist, 'DANTE') !== false) {
+				$event['color'] = 'green';
+			} elseif (strpos($dentist, 'VEM') !== false) {
+				$event['color'] = 'orange';
 			} else {
-				$data_arr[$i]['color'] = "dark-gray";
+				$event['color'] = '#343a40';
 			}
 
 		}
-		$data_arr[$i]['url'] = '#';
-		$i++;
+
+		$data_arr[] = $event;
 	}
 
-	$data = array(
-		'status' => true,
-		'msg' => 'successfully!',
-		'data' => $data_arr
-	);
+	echo json_encode(array(
+		"status" => true,
+		"msg" => "success",
+		"data" => $data_arr
+	));
+
 } else {
-	$data = array(
-		'status' => false,
-		'msg' => 'Error!'
-	);
-}
 
-function getDarkRandomColor()
-{
-	$r = mt_rand(0, 150);
-	$g = mt_rand(0, 150);
-	$b = mt_rand(0, 150);
+	echo json_encode(array(
+		"status" => false,
+		"msg" => "No events found.",
+		"data" => array()
+	));
 
-	return sprintf("#%02X%02X%02X", $r, $g, $b);
 }
-echo json_encode($data);
-?>
