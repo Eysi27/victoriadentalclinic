@@ -112,7 +112,7 @@ class ServiceClass
 <tr>
 <th width="20%">Treatment</th>
 <th style="text-align:center;">Price</th>
-<th style="text-align:center;">HMO</th>
+<th style="text-align:center;">Remarks</th>
 <th style="text-align:center;">Payment</th>
 <th style="text-align:center;">Payment Type</th>
 <th style="text-align:center;">Payment Date</th>
@@ -140,7 +140,7 @@ class ServiceClass
                            
                            
                             <td style="text-align:right;" >' . number_format($row2["price"], 2) . '</td>
-                            <td style="text-align:center;">' . (!empty($row2["hmo"]) ? $row2["hmo"] : '-') . '</td>
+                            <td style="text-align:center;">' . (!empty($row2["remarks"]) ? $row2["remarks"] : '-') . '</td>
 
                             ';
 
