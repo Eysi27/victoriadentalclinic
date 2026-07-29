@@ -112,7 +112,9 @@ class ServiceClass
 <tr>
 <th width="20%">Treatment</th>
 <th style="text-align:center;">Price</th>
+<th style="text-align:center;">Diagnosis</th>
 <th style="text-align:center;">Remarks</th>
+<th style="text-align:center;">Details</th>
 <th style="text-align:center;">Payment</th>
 <th style="text-align:center;">Payment Type</th>
 <th style="text-align:center;">Payment Date</th>
@@ -140,7 +142,9 @@ class ServiceClass
                            
                            
                             <td style="text-align:right;" >' . number_format($row2["price"], 2) . '</td>
+                             <td style="text-align:center;">' . (!empty($row2["diagnosis"]) ? $row2["diagnosis"] : '-') . '</td>
                             <td style="text-align:center;">' . (!empty($row2["remarks"]) ? $row2["remarks"] : '-') . '</td>
+                             <td style="text-align:center;">' . (!empty($row2["details"]) ? $row2["details"] : '-') . '</td>
 
                             ';
 
@@ -256,6 +260,8 @@ class ServiceClass
                                             <td colspan="1">Total</td>
                                             <td style="text-align:right;">' . number_format($row["total"], 2) . '</td>
                                             <td></td>
+                                              <td></td>
+                                                <td></td>
                                               <td style="text-align:right;">' . number_format($totalPaymentSoa, 2) . '</td>
                                                 <td></td>
                                                   <td></td>
