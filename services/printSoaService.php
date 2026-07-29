@@ -142,9 +142,9 @@ class ServiceClass
                            
                            
                             <td style="text-align:right;" >' . number_format($row2["price"], 2) . '</td>
-                             <td style="text-align:right;">' . (!empty($row2["diagnosis"]) ? $row2["diagnosis"] : '-') . '</td>
-                            <td style="text-align:right;">' . (!empty($row2["remarks"]) ? $row2["remarks"] : '-') . '</td>
-                             <td style="text-align:right;">' . (!empty($row2["details"]) ? $row2["details"] : '-') . '</td>
+                             <td style="text-align:left;">' . (!empty($row2["diagnosis"]) ? $row2["diagnosis"] : '-') . '</td>
+                            <td style="text-align:left;">' . (!empty($row2["remarks"]) ? $row2["remarks"] : '-') . '</td>
+                             <td style="text-align:left;">' . (!empty($row2["details"]) ? $row2["details"] : '-') . '</td>
 
                             ';
 
